@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour {
 	public Feet Feet;
 	public bool isGrounded { get { return Feet.isGrounded; } }
 	
+	public LayerMask TriggerLayer;
+	
 	private float lastJump;
 	
 	public Vector2 Input;
@@ -46,6 +48,13 @@ public class PlayerController : MonoBehaviour {
 			}
 			
 			rigidbody2D.AddForce(d, ForceMode2D.Impulse);
+		}
+	}
+	
+	public void DoAction() {
+		Collider2D col = Physics2D.OverlapPoint(transform.position,TriggerLayer);
+		if(col) {
+			col.GetComponent<Trigger>().OnTrigger();
 		}
 	}
 }

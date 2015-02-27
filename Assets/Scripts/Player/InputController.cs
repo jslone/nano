@@ -13,5 +13,8 @@ public class InputController : MonoBehaviour {
 	void Update () {
 		player.Input.x = Input.GetAxis("Horizontal");
 		player.Input.y = Input.GetAxis("Jump");
+		if(Input.GetButtonDown("Action")) {
+			player.DoAction();
+		}
 	}
 }
