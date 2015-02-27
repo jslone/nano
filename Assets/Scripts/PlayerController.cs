@@ -1,15 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum ControlType {
-	ARCADE,
-	SMOOTH
-};
-
 public class PlayerController : MonoBehaviour {
-	public ControlType Type;
+	
 	public float Speed;
+	public float JumpSpeed;
+	
+	public LayerMask GroundLayer;
 	public bool canMove;
+	public bool canJump;
+	
+	public bool grounded
+	{
+		get
+		{
+			return Physics2D.Raycast(transform.position, -Vector2.up, 0.1f, GroundLayer).collider != null;
+		}
+	}
 	
 	private Vector2 delta;
 	
@@ -20,24 +27,18 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(canMove) {
-			// get delta vector
-			delta.x = Speed * Input.GetAxis("Horizontal");
-			delta.y = 0;
-		}
+		// get delta vector
+		delta.x = Speed * Input.GetAxis("Horizontal");
+		delta.y = JumpSpeed * Input.GetAxis("Jump");
 	}
 	
 	// Fixed update called every physics update
 	void FixedUpdate() {
-		switch (Type) {
-		// use delta vector as velocity
-		case ControlType.ARCADE:
-			rigidbody2D.MovePosition(rigidbody2D.position + delta * Time.fixedDeltaTime);
-			break;
-		// use delta vector as acceleration
-		case ControlType.SMOOTH:
-			rigidbody2D.velocity += delta * Time.fixedDeltaTime;
-			break;
+		if(canMove) {
+			Vector3 d = delta;
+			d.y = canJump && grounded ? d.y : 0;
+			
+			rigidbody2D.AddForce(d);
 		}
 	}
 }
