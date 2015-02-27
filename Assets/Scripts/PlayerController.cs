@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof(Rigidbody2D), typeof(Collider2D), typeof(Animator))]
 public class PlayerController : MonoBehaviour {
 	
 	public float Speed;
@@ -19,10 +20,12 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	private Vector2 delta;
+	private Animator anim;
 	
 	// Use this for initialization
 	void Start () {
 		delta = Vector2.zero;
+		anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -30,6 +33,7 @@ public class PlayerController : MonoBehaviour {
 		// get delta vector
 		delta.x = Speed * Input.GetAxis("Horizontal");
 		delta.y = JumpSpeed * Input.GetAxis("Jump");
+		anim.SetFloat("speed",delta.x);
 	}
 	
 	// Fixed update called every physics update
