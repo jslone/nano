@@ -16,5 +16,11 @@ public class InputController : MonoBehaviour {
 		if(Input.GetButtonDown("Action")) {
 			player.DoAction();
 		}
+		if(Input.GetButtonDown("ZoomIn")) {
+			player.ZoomIn();
+		}
+		if(Input.GetButtonDown("ZoomOut")) {
+			player.ZoomOut();
+		}
 	}
 }
