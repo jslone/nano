@@ -2,19 +2,12 @@
 using System.Collections;
 
 public class GearTrigger : Trigger {
-	public Rigidbody2D Gear;
+	public WheelJoint2D Gear;
 	public float Speed;
-	public bool isRotating;
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(isRotating) {
-			Gear.AddTorque(Speed,ForceMode2D.Impulse);
-		}
+	public bool isRotating
+	{ 
+		get { return Gear.useMotor; }
+		set { Gear.useMotor = value; }
 	}
 	
 	public override void OnTrigger ()

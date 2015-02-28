@@ -41,10 +41,43 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 401280}
-  - 212: {fileID: 21201278}
-  - 50: {fileID: 5001276}
   m_Layer: 0
   m_Name: gear
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &105000
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 405000}
+  - 50: {fileID: 5005002}
+  m_Layer: 0
+  m_Name: anchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &105002
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 405002}
+  - 50: {fileID: 5083244}
+  - 212: {fileID: 21283244}
+  - 61: {fileID: 6183244}
+  - 235: {fileID: 23583244}
+  m_Layer: 0
+  m_Name: wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,7 +90,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101276}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.87531805, y: .811520576, z: 0}
+  m_LocalPosition: {x: 6.88000011, y: .769999981, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 401280}
@@ -82,22 +115,63 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101280}
-  m_LocalRotation: {x: 0, y: 0, z: .645769596, w: -.763532341}
-  m_LocalPosition: {x: 4.2846818, y: 2.48847938, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
-  m_Children: []
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.24000001, y: 1.89999998, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 405000}
+  - {fileID: 405002}
   m_Father: {fileID: 401276}
   m_RootOrder: 0
---- !u!50 &5001276
+--- !u!4 &405000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 401280}
+  m_RootOrder: 0
+--- !u!4 &405002
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_Children: []
+  m_Father: {fileID: 401280}
+  m_RootOrder: 1
+--- !u!50 &5005002
 Rigidbody2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 101280}
+  m_GameObject: {fileID: 105000}
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 1
-  m_GravityScale: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!50 &5083244
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105002}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -114,6 +188,17 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: .200000003, y: .200000003}
   m_Center: {x: 0, y: 0}
+--- !u!61 &6183244
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105002}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .159999996, y: .159999996}
+  m_Center: {x: 0, y: 0}
 --- !u!114 &11401276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,9 +210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d139c8068efce464c833639e1e7bd767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gear: {fileID: 5001276}
+  Gear: {fileID: 23583244}
   Speed: .100000001
-  isRotating: 0
 --- !u!212 &21201276
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -150,12 +234,12 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!212 &21201278
+--- !u!212 &21283244
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 101280}
+  m_GameObject: {fileID: 105002}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -172,6 +256,26 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!235 &23583244
+WheelJoint2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105002}
+  m_Enabled: 1
+  m_CollideConnected: 0
+  m_ConnectedRigidBody: {fileID: 5005002}
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_Suspension:
+    serializedVersion: 2
+    m_DampingRatio: .699999988
+    m_Frequency: 2
+    m_Angle: 90
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 30
+    m_MaximumMotorForce: 10000
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
