@@ -3,7 +3,6 @@ using System.Collections;
 
 public class GearTrigger : Trigger {
 	public WheelJoint2D Gear;
-	public float Speed;
 	public bool isRotating
 	{ 
 		get { return Gear.useMotor; }
