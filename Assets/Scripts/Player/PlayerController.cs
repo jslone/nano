@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour {
 	public float JumpSpeedDelay;
 	public float JumpSpeedFalloff;
 	
-	public LayerMask GroundLayer;
 	public bool canMove;
 	public bool canJump;
 	
