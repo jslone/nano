@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11455716}
   - 212: {fileID: 21297742}
   - 95: {fileID: 9597742}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Nano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ GameObject:
   - 4: {fileID: 491434}
   - 61: {fileID: 6191434}
   - 114: {fileID: 11491434}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Feet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

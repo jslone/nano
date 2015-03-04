@@ -17,10 +17,10 @@ public class Feet : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) {
-		count++;
+		if(!other.isTrigger) count++;
 	}
 	
 	void OnTriggerExit2D(Collider2D other) {
-		count--;
+		if(!other.isTrigger) count--;
 	}
 }
