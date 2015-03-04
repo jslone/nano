@@ -4,8 +4,7 @@ using System.Collections;
 public class TogglePlayer : MonoBehaviour {
 	public InputController inputController;
 	public CameraController cameraController;
-	public PlayerController[] players;
-	
+	public Character currentCharacter;
 	private PlayerController _player;
 	public PlayerController Player
 	{
@@ -20,11 +19,20 @@ public class TogglePlayer : MonoBehaviour {
 	
 	private static int microLevelDefault = 0;
 	private static int nanoLevelDefault = 1;
-	private static int zoomLevel = 0;
 	
 	// Use this for initialization
 	void Start () {
-
+		switch(currentCharacter) {
+			case Character.MICRO:
+				Player = GameObject.Find("Micro").GetComponent<PlayerController>();
+				break;
+			case Character.NANO:
+				Player = GameObject.Find("Nano").GetComponent<PlayerController>();
+				break;
+			case Character.PICO:
+				Player = GameObject.Find("Pico").GetComponent<PlayerController>();
+				break;
+		}
 	}
 	
 	// Update is called once per frame
@@ -38,38 +46,40 @@ public class TogglePlayer : MonoBehaviour {
 	}
 	
 	public void ZoomIn() {
-		switch(zoomLevel) {
-		case 0:
+		switch(currentCharacter) {
+		case Character.MICRO:
 			// load nano's world
 			int level = PlayerPrefs.GetInt("nano.level",nanoLevelDefault);
 			Application.LoadLevel(level);
 			break;
-		case 1:
+		case Character.NANO:
 			// switch to pico
+			Player = GameObject.Find("Pico").GetComponent<PlayerController>();
 			break;
 		default:
 			return;
 		}
-		zoomLevel++;
+		currentCharacter++;
 	}
 	
 	public void ZoomOut() {
-		switch(zoomLevel) {
-		case 1:
+		switch(currentCharacter) {
+		case Character.NANO:
 			// load micro's world
 			int level = PlayerPrefs.GetInt("micro.level",microLevelDefault);
 			Application.LoadLevel(level);
 			break;
-		case 2:
+		case Character.PICO:
 			// switch to nano
+			Player = GameObject.Find("Nano").GetComponent<PlayerController>();
 			break;
 		default:
 			return;
 		}
-		zoomLevel--;
+		currentCharacter--;
 	}
 	
 	
-	
+
 	
 }
