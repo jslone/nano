@@ -10,14 +10,14 @@ public class PistonJoint2D : MonoBehaviour {
 	private float time = 0;
 	// Use this for initialization
 	void Start () {
-		pos = transform.position;
+		pos = transform.localPosition;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(useMotor) {
 			time += Time.deltaTime;
-			transform.position = pos + Offset * Mathf.PingPong(Speed * time, 1.0f);
+			transform.localPosition = pos + Offset * Mathf.PingPong(Speed * time, 1.0f);
 		}
 	}
 }
