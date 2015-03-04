@@ -9,10 +9,6 @@ public enum Character {
 
 [RequireComponent (typeof(Rigidbody2D), typeof(Collider2D), typeof(Animator))]
 public class PlayerController : MonoBehaviour {
-	private static int zoomLevel = 0;
-	private static int microLevelDefault = 0;
-	private static int nanoLevelDefault = 1;
-	
 	public Character Me;
 	
 	public float Speed;
@@ -31,13 +27,15 @@ public class PlayerController : MonoBehaviour {
 	private float lastJump;
 	
 	public Vector2 Input;
-	private Animator anim;
+	private Animator animator;
+	new private Rigidbody2D rigidbody2D;	// rigidbody2D is marked as obsolete but not gone
 	
 	// Use this for initialization
 	void Start () {
 		Input = Vector2.zero;
-		anim = GetComponent<Animator>();
-		
+		animator = GetComponent<Animator>();
+		rigidbody2D = GetComponent<Rigidbody2D>();
+
 		Vector3 pos = transform.position;
 		switch(Me) {
 			case Character.MICRO:
@@ -57,7 +55,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		// set animation
-		anim.SetFloat("speed",Input.x);
+		animator.SetFloat("speed",Input.x);
 	}
 	
 	// Fixed update called every physics update
@@ -82,38 +80,6 @@ public class PlayerController : MonoBehaviour {
 		if(col) {
 			col.GetComponent<Trigger>().OnTrigger();
 		}
-	}
-	
-	public void ZoomIn() {
-		switch(zoomLevel) {
-			case 0:
-				// load nano's world
-				int level = PlayerPrefs.GetInt("nano.level",nanoLevelDefault);
-				Application.LoadLevel(level);
-				break;
-			case 1:
-				// switch to pico
-				break;
-			default:
-				return;
-		}
-		zoomLevel++;
-	}
-	
-	public void ZoomOut() {
-		switch(zoomLevel) {
-			case 1:
-				// load micro's world
-				int level = PlayerPrefs.GetInt("micro.level",microLevelDefault);
-				Application.LoadLevel(level);
-				break;
-			case 2:
-				// switch to nano
-				break;
-			default:
-				return;
-		}
-		zoomLevel--;
 	}
 	
 	void OnDestroy() {
