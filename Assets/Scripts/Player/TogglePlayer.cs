@@ -2,9 +2,11 @@
 using System.Collections;
 
 public class TogglePlayer : MonoBehaviour {
-	public InputController inputController;
-	public CameraController cameraController;
+	public GameObject PicoPrefab;
+
 	public Character currentCharacter;
+
+	// maintain current player
 	private PlayerController _player;
 	public PlayerController Player
 	{
@@ -16,22 +18,20 @@ public class TogglePlayer : MonoBehaviour {
 			cameraController.player = value;
 		}
 	}
-	
+
+	public InputController inputController;
+	public CameraController cameraController;
+
+	// default levels
 	private static int microLevelDefault = 0;
 	private static int nanoLevelDefault = 1;
 	
 	// Use this for initialization
 	void Start () {
-		switch(currentCharacter) {
-			case Character.MICRO:
-				Player = GameObject.Find("Micro").GetComponent<PlayerController>();
-				break;
-			case Character.NANO:
-				Player = GameObject.Find("Nano").GetComponent<PlayerController>();
-				break;
-			case Character.PICO:
-				Player = GameObject.Find("Pico").GetComponent<PlayerController>();
-				break;
+		if(currentCharacter == Character.PICO) {
+			Player = Instantiate<GameObject>(PicoPrefab).GetComponent<PlayerController>();
+		} else {
+			Player = GameObject.Find(currentCharacter.ToString()).GetComponent<PlayerController>();
 		}
 	}
 	
@@ -54,7 +54,7 @@ public class TogglePlayer : MonoBehaviour {
 			break;
 		case Character.NANO:
 			// switch to pico
-			Player = GameObject.Find("Pico").GetComponent<PlayerController>();
+			Player = Instantiate<GameObject>(PicoPrefab).GetComponent<PlayerController>();
 			break;
 		default:
 			return;
@@ -71,7 +71,8 @@ public class TogglePlayer : MonoBehaviour {
 			break;
 		case Character.PICO:
 			// switch to nano
-			Player = GameObject.Find("Nano").GetComponent<PlayerController>();
+			Destroy(Player.gameObject);
+			Player = GameObject.Find(Character.NANO.ToString()).GetComponent<PlayerController>();
 			break;
 		default:
 			return;

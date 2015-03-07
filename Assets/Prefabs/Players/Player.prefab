@@ -98,9 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a0f8b73afcba429193e29861f0d0cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PicoPrefab: {fileID: 135226, guid: 5fd9f9915012c4933b2930cfc2cd1758, type: 2}
+  currentCharacter: 0
   inputController: {fileID: 11418780}
   cameraController: {fileID: 11410810}
-  currentCharacter: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

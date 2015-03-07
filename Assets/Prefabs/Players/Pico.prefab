@@ -11,10 +11,11 @@ GameObject:
   - 50: {fileID: 5035228}
   - 61: {fileID: 6135228}
   - 114: {fileID: 11435228}
+  - 114: {fileID: 11440546}
   - 212: {fileID: 21235228}
   - 95: {fileID: 9535228}
   m_Layer: 9
-  m_Name: Pico
+  m_Name: PICO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +45,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.25999999, y: .5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children:
   - {fileID: 478346}
@@ -143,6 +144,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   Input: {x: 0, y: 0}
+--- !u!114 &11440546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2dff92d6b4844aad87421316114ad4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggle: {fileID: 0}
+  TTL: 60
 --- !u!114 &11478346
 MonoBehaviour:
   m_ObjectHideFlags: 1

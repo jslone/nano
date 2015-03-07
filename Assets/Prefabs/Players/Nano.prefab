@@ -14,7 +14,7 @@ GameObject:
   - 212: {fileID: 21297742}
   - 95: {fileID: 9597742}
   m_Layer: 9
-  m_Name: Nano
+  m_Name: NANO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
