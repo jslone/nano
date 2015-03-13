@@ -2,16 +2,38 @@
 using System.Collections;
 
 public class DoorTrigger : Trigger {
-	public SliderJoint2D Door;
+	public SliderJoint2D[] Doors;
 	
 	public bool isOpen
 	{ 
-		get { return Door.useMotor; }
-		set { Door.useMotor = value; }
+		get
+        {
+            bool on = false;
+            foreach (SliderJoint2D door in Doors)
+            {
+                on |= door.useMotor;
+            }
+            return on;
+        }
+        set
+        {
+            foreach (SliderJoint2D door in Doors)
+            {
+                door.useMotor = value;
+            }
+        }
 	}
+
+    public void Flip()
+    {
+        foreach(SliderJoint2D door in Doors)
+        {
+            door.useMotor = !door.useMotor;
+        }
+    }
 	
 	public override void OnTrigger ()
 	{
-		isOpen = !isOpen;
+        Flip();
 	}
 }
