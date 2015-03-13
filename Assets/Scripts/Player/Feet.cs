@@ -3,24 +3,31 @@ using System.Collections;
 
 [RequireComponent (typeof(Collider2D))]
 public class Feet : MonoBehaviour {
-	public bool isGrounded { get { return count > 0; } }
-	int count = 0;
+	public bool isGrounded { get; private set; }
+	private bool touchedLastFrame;
 	
 	// Use this for initialization
 	void Start () {
-	
+		isGrounded = false;
+		touchedLastFrame = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if(touchedLastFrame) {
+			touchedLastFrame = false;
+		} else {
+			isGrounded = false;
+		}
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) {
-		if(!other.isTrigger) count++;
+		isGrounded = true;
+		touchedLastFrame = true;
 	}
-	
-	void OnTriggerExit2D(Collider2D other) {
-		if(!other.isTrigger) count--;
+
+	void OnTriggerStay2D(Collider2D other) {
+		isGrounded = true;
+		touchedLastFrame = true;
 	}
 }
