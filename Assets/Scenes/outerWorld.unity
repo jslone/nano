@@ -2652,7 +2652,7 @@ GameObject:
   - 4: {fileID: 1411997777}
   m_Layer: 0
   m_Name: MICRO_WORLD
-  m_TagString: Untagged
+  m_TagString: MICRO
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

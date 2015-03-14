@@ -42,15 +42,7 @@ public class PlayerController : MonoBehaviour {
 		rigidbody2D = GetComponent<Rigidbody2D>();
 
 		// Get stored location
-		if(Me != Character.PICO) {
-			Vector3 pos = transform.position;
-			string posKey = Me + "." + Application.loadedLevelName +  ".pos.";
-
-			pos.x = PlayerPrefs.GetFloat(posKey + "x", pos.x);
-			pos.y = PlayerPrefs.GetFloat(posKey + "y", pos.y);
-
-			transform.position = pos;
-		} else {
+		if(Me == Character.PICO) {
 			transform.parent = GameObject.Find(Character.NANO.ToString()).transform;
 			transform.localPosition = Vector3.right;
 		}
@@ -88,16 +80,6 @@ public class PlayerController : MonoBehaviour {
 		Collider2D col = Physics2D.OverlapPoint(transform.position,TriggerLayer);
 		if(col) {
 			col.GetComponent<Trigger>().OnTrigger();
-		}
-	}
-
-	// Save current location of character
-	void OnDestroy() {
-		if(Me != Character.PICO) {
-			string posKey = Me + "." + Application.loadedLevelName +  ".pos.";
-			
-			PlayerPrefs.SetFloat(posKey + "x", transform.position.x);
-			PlayerPrefs.SetFloat(posKey + "y", transform.position.y);
 		}
 	}
 }
