@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/microTest.unity
+    path: Assets/Scenes/outerWorld.unity
   - enabled: 1
-    path: Assets/Scenes/nanoTest.unity
+    path: Assets/Scenes/nano1.unity
