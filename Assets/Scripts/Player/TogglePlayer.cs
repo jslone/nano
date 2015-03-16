@@ -24,23 +24,29 @@ public class TogglePlayer : MonoBehaviour {
 	public CameraController cameraController;
 
 	// default levels
-    private static int[] defaultLevels = {0,1};
-    private static List<GameObject>[] worlds = new List<GameObject>[] {
-        new List<GameObject>(),
-        new List<GameObject>()
-    };
+	private static int[] defaultLevels = {0,1};
+	private static List<GameObject>[] worlds = new List<GameObject>[] {
+		new List<GameObject>(),
+		new List<GameObject>()
+	};
+
+	// for zooming in and out of Nano's world
+	public float zoomSpeed = 5f;
+	public float minZoom = 2f;
+	public float maxZoom = 7f;
+	private bool zoomedToPico = false;
 	
 	// Use this for initialization
 	void Start () {
-        if (currentCharacter == Character.PICO)
-        {
-            Player = Instantiate<GameObject>(PicoPrefab).GetComponent<PlayerController>();
-        }
-        else
-        {
-            Player = GameObject.Find(currentCharacter.ToString()).GetComponent<PlayerController>();
-            CacheWorld(currentCharacter);
-        }
+		if (currentCharacter == Character.PICO)
+		{
+			Player = Instantiate<GameObject>(PicoPrefab).GetComponent<PlayerController>();
+		}
+		else
+		{
+			Player = GameObject.Find(currentCharacter.ToString()).GetComponent<PlayerController>();
+			CacheWorld(currentCharacter);
+		}
 	}
 	
 	// Update is called once per frame
@@ -51,52 +57,64 @@ public class TogglePlayer : MonoBehaviour {
 		if(Input.GetButtonDown("ZoomOut")) {
 			ZoomOut();
 		}
+
+		// Zoom in or out by adjusting camera size
+		Camera _camera = GetComponent<Camera>();
+		if (zoomedToPico) {
+			_camera.orthographicSize -= Time.deltaTime * zoomSpeed;
+		} else {
+			_camera.orthographicSize += Time.deltaTime * zoomSpeed;
+		}
+		_camera.orthographicSize = Mathf.Clamp(_camera.orthographicSize, minZoom, maxZoom);
 	}
 
-    void CacheWorld(Character current)
-    {
-        GameObject[] world = GameObject.FindGameObjectsWithTag(currentCharacter.ToString());
-        foreach (GameObject g in world)
-        {
-            worlds[(int)currentCharacter].Add(g);
-        }
-    }
+	void CacheWorld(Character current)
+	{
+		GameObject[] world = GameObject.FindGameObjectsWithTag(currentCharacter.ToString());
+		foreach (GameObject g in world)
+		{
+			worlds[(int)currentCharacter].Add(g);
+		}
+	}
 
-    void SwapLevel(Character current, Character next)
-    {
-        // disable micros world
-        foreach(GameObject g in worlds[(int)current])
-        {
-            g.SetActive(false);
-        }
+	void SwapLevel(Character current, Character next)
+	{
+		// disable micros world
+		foreach(GameObject g in worlds[(int)current])
+		{
+			g.SetActive(false);
+		}
 
-        // if nano's world can't be found, load it
-        if (worlds[(int)next].Count == 0)
-        {
-            Application.LoadLevelAdditive(defaultLevels[(int)next]);
-            CacheWorld(next);
-        }
-        
-        // otherwise activate nano's world
-        else
-        {
-            foreach (GameObject g in worlds[(int)next])
-            {
-                g.SetActive(true);
-            }
-        }
-    }
+		// if nano's world can't be found, load it
+		if (worlds[(int)next].Count == 0)
+		{
+			Application.LoadLevelAdditive(defaultLevels[(int)next]);
+			CacheWorld(next);
+		}
+		
+		// otherwise activate nano's world
+		else
+		{
+			foreach (GameObject g in worlds[(int)next])
+			{
+				g.SetActive(true);
+			}
+		}
+	}
 	
 	public void ZoomIn() {
 		switch(currentCharacter) {
 		case Character.MICRO:
-            SwapLevel(Character.MICRO, Character.NANO);
+			SwapLevel(Character.MICRO, Character.NANO);
 			break;
+
 		case Character.NANO:
 			// release the pico
 			Player = Instantiate<GameObject>(PicoPrefab).GetComponent<PlayerController>();
-            currentCharacter = Character.PICO;
+			currentCharacter = Character.PICO;
+			zoomedToPico = true;
 			break;
+
 		default:
 			return;
 		}
@@ -105,20 +123,21 @@ public class TogglePlayer : MonoBehaviour {
 	public void ZoomOut() {
 		switch(currentCharacter) {
 		case Character.NANO:
-            SwapLevel(Character.NANO, Character.MICRO);
+			SwapLevel(Character.NANO, Character.MICRO);
 			break;
+
 		case Character.PICO:
 			// switch to nano
 			Destroy(Player.gameObject);
 			Player = GameObject.Find(Character.NANO.ToString()).GetComponent<PlayerController>();
-            currentCharacter = Character.NANO;
+			currentCharacter = Character.NANO;
+			zoomedToPico = false;
 			break;
+
 		default:
 			return;
 		}
 	}
 	
-	
-
 	
 }
