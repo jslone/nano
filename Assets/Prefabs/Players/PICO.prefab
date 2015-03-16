@@ -90,7 +90,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: .5}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: .400000006, y: 1}
 --- !u!61 &6178346
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -103,7 +103,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: .600000024, y: .100000001}
+  m_Size: {x: .239999995, y: .100000001}
 --- !u!95 &9535228
 Animator:
   serializedVersion: 3
@@ -192,7 +192,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 30e3c94e0994f4726a4e056664136096, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3c63315bc5b05fe49a95e7acc1fb0f4c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

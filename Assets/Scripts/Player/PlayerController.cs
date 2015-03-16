@@ -32,7 +32,9 @@ public class PlayerController : MonoBehaviour {
 	public Vector2 Input;
 	private Animator animator;
 	new private Rigidbody2D rigidbody2D;	// rigidbody2D is marked as obsolete but not gone
-	
+
+	private bool facingRight = true;
+
 	// Use this for initialization
 	void Start () {
 
@@ -51,12 +53,22 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		// update animator parameters
-		animator.SetFloat("speed",Input.x);
+		animator.SetFloat("speed",Mathf.Abs(Input.x));
 	}
-	
+
+	void Flip() {
+		facingRight = !facingRight;
+		Vector3 scale = transform.localScale;
+		scale.x *= -1;
+		transform.localScale = scale;
+	}
+
 	// Fixed update called every physics update
 	void FixedUpdate() {
 		if(canMove) {
+			if((facingRight && Input.x < 0) || (!facingRight && Input.x > 0))
+				Flip();
+
 			Vector3 d = Vector2.zero;
 
 			// Calculate run movement
