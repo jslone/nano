@@ -34,7 +34,10 @@ public class TogglePlayer : MonoBehaviour {
 	public float zoomSpeed = 5f;
 	public float minZoom = 2f;
 	public float maxZoom = 7f;
+	public float zoomOffset = -4f;
+
 	private bool zoomedToPico = false;
+	private bool zooming = false;
 	
 	// Use this for initialization
 	void Start () {
@@ -51,21 +54,38 @@ public class TogglePlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetButtonDown("ZoomIn")) {
-			ZoomIn();
-		}
-		if(Input.GetButtonDown("ZoomOut")) {
-			ZoomOut();
-		}
 
 		// Zoom in or out by adjusting camera size
-		Camera _camera = GetComponent<Camera>();
-		if (zoomedToPico) {
-			_camera.orthographicSize -= Time.deltaTime * zoomSpeed;
+		if (zooming) {
+			Camera _camera = GetComponent<Camera>();
+			float newSize;
+			float newOffset;
+
+			if (zoomedToPico) {
+				newSize = _camera.orthographicSize - Time.deltaTime * zoomSpeed;
+			} else {
+				newSize = _camera.orthographicSize + Time.deltaTime * zoomSpeed;
+			}
+
+			if (newSize >= maxZoom) {
+				_camera.orthographicSize = maxZoom;
+				cameraController.offset.y -= zoomOffset;
+				zooming = false;
+			} else if (newSize <= minZoom) {
+				_camera.orthographicSize = minZoom;
+				zooming = false;
+			} else {
+				_camera.orthographicSize = newSize;
+			}
 		} else {
-			_camera.orthographicSize += Time.deltaTime * zoomSpeed;
+			// Otherwise, check for zoom button
+			if (Input.GetButtonDown("ZoomIn")) {
+				ZoomIn();
+			}
+			if (Input.GetButtonDown("ZoomOut")) {
+				ZoomOut();
+			}
 		}
-		_camera.orthographicSize = Mathf.Clamp(_camera.orthographicSize, minZoom, maxZoom);
 	}
 
 	void CacheWorld(Character current)
@@ -103,6 +123,10 @@ public class TogglePlayer : MonoBehaviour {
 	}
 	
 	public void ZoomIn() {
+		if (zooming) {
+			return;
+		}
+
 		switch(currentCharacter) {
 		case Character.MICRO:
 			SwapLevel(Character.MICRO, Character.NANO);
@@ -112,7 +136,9 @@ public class TogglePlayer : MonoBehaviour {
 			// release the pico
 			Player = Instantiate<GameObject>(PicoPrefab).GetComponent<PlayerController>();
 			currentCharacter = Character.PICO;
+			cameraController.offset.y += zoomOffset;
 			zoomedToPico = true;
+			zooming = true;
 			break;
 
 		default:
@@ -121,6 +147,10 @@ public class TogglePlayer : MonoBehaviour {
 	}
 	
 	public void ZoomOut() {
+		if (zooming) {
+			return;
+		}
+
 		switch(currentCharacter) {
 		case Character.NANO:
 			SwapLevel(Character.NANO, Character.MICRO);
@@ -132,6 +162,7 @@ public class TogglePlayer : MonoBehaviour {
 			Player = GameObject.Find(Character.NANO.ToString()).GetComponent<PlayerController>();
 			currentCharacter = Character.NANO;
 			zoomedToPico = false;
+			zooming = true;
 			break;
 
 		default:

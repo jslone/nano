@@ -8,8 +8,8 @@ public class CameraController : MonoBehaviour
 
     public float xMargin = 1f;		// Distance in the x axis the player can move before the camera follows.
     public float yMargin = 1f;		// Distance in the y axis the player can move before the camera follows.
-    public float xSmooth = 8f;		// How smoothly the camera catches up with it's target movement in the x axis.
-    public float ySmooth = 8f;		// How smoothly the camera catches up with it's target movement in the y axis.
+    public float xSmooth = 8f;		// How smoothly the camera catches up with its target movement in the x axis.
+    public float ySmooth = 8f;		// How smoothly the camera catches up with its target movement in the y axis.
     public Vector2 maxXAndY;		// The maximum x and y coordinates the camera can have.
     public Vector2 minXAndY;		// The minimum x and y coordinates the camera can have.
 
@@ -35,7 +35,7 @@ public class CameraController : MonoBehaviour
 
     void TrackPlayer()
     {
-        // By default the target x and y coordinates of the camera are it's current x and y coordinates.
+        // By default the target x and y coordinates of the camera are its current x and y coordinates.
         float targetX = transform.position.x;
         float targetY = transform.position.y;
 

@@ -3521,6 +3521,14 @@ Prefab:
       propertyPath: zoomSpeed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11428098, guid: 2780b3d58390f44d28f36e9d9bf77735, type: 2}
+      propertyPath: zoomOffset
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11410810, guid: 2780b3d58390f44d28f36e9d9bf77735, type: 2}
+      propertyPath: ySmooth
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2780b3d58390f44d28f36e9d9bf77735, type: 2}
   m_IsPrefabParent: 0
