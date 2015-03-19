@@ -3,7 +3,8 @@ using System.Collections;
 
 public class GearTrigger : Trigger {
 	public WheelJoint2D[] Gears;
-	public bool isRotating
+
+	public override bool On
 	{ 
 		get
         {
@@ -23,16 +24,11 @@ public class GearTrigger : Trigger {
         }
 	}
 
-    public void Flip()
+    public override void Flip()
     {
         foreach(WheelJoint2D gear in Gears)
         {
             gear.useMotor = !gear.useMotor;
         }
     }
-	
-	public override void OnTrigger ()
-	{
-        Flip();
-	}
 }

@@ -5,9 +5,13 @@ public abstract class Trigger : MonoBehaviour {
 	public bool TriggerOnEnter;
 	public bool TriggerOnExit;
 
-	private int count = 0;
+	public bool ChangeEach = true;
+	public bool UseOnce;
 
-	public abstract void OnTrigger();
+	private int count = 0;
+	
+	public abstract void Flip();
+	public abstract bool On { get; set; }
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if(TriggerOnEnter && count == 0) {
@@ -20,6 +24,17 @@ public abstract class Trigger : MonoBehaviour {
 		count--;
 		if(TriggerOnExit && count == 0) {
 			OnTrigger();
+		}
+	}
+
+	public void OnTrigger() {
+		if(ChangeEach) {
+			Flip();
+		} else {
+			On = !On;
+		}
+		if(UseOnce) {
+			enabled = false;
 		}
 	}
 }

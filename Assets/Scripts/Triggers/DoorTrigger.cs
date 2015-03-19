@@ -4,7 +4,7 @@ using System.Collections;
 public class DoorTrigger : Trigger {
 	public SliderJoint2D[] Doors;
 	
-	public bool isOpen
+	public override bool On
 	{ 
 		get
         {
@@ -24,16 +24,11 @@ public class DoorTrigger : Trigger {
         }
 	}
 
-    public void Flip()
+    public override void Flip()
     {
         foreach(SliderJoint2D door in Doors)
         {
             door.useMotor = !door.useMotor;
         }
     }
-	
-	public override void OnTrigger ()
-	{
-        Flip();
-	}
 }
