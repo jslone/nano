@@ -87,23 +87,6 @@ NavMeshSettings:
     cellSize: .166666657
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &96863851
-GameObject:
-  m_PrefabParentObject: {fileID: 178346, guid: 5fd9f9915012c4933b2930cfc2cd1758, type: 2}
-  m_PrefabInternal: {fileID: 1637658680}
---- !u!58 &96863852
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 96863851}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: .200000003
 --- !u!1 &153730220
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,20 +589,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 478346, guid: 5fd9f9915012c4933b2930cfc2cd1758, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: .298000008
-      objectReference: {fileID: 0}
-    - target: {fileID: 6135228, guid: 5fd9f9915012c4933b2930cfc2cd1758, type: 2}
-      propertyPath: m_Size.y
-      value: .600000024
-      objectReference: {fileID: 0}
-    - target: {fileID: 6135228, guid: 5fd9f9915012c4933b2930cfc2cd1758, type: 2}
-      propertyPath: m_Offset.y
-      value: .600000024
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6178346, guid: 5fd9f9915012c4933b2930cfc2cd1758, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5fd9f9915012c4933b2930cfc2cd1758, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2030122733
