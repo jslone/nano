@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MICRO
   - NANO
+  - Lava
   layers:
   - Default
   - TransparentFX
