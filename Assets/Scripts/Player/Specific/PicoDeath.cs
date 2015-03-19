@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PicoTimer : MonoBehaviour {
+public class PicoDeath : DeathController {
 	public TogglePlayer toggle;
 	public float TTL;
 
@@ -14,8 +14,13 @@ public class PicoTimer : MonoBehaviour {
 	void Update () {
 		TTL -= Time.deltaTime;
 		if(TTL < 0) {
-			toggle.ZoomOut();
-			Destroy(gameObject);
+			Die ();
 		}
+	}
+
+	public override void Die ()
+	{
+		toggle.ZoomOut();
+		Destroy(gameObject);
 	}
 }
