@@ -21,15 +21,15 @@ public class Feet : MonoBehaviour {
 		}
 	}
 	
-	void OnTriggerEnter2D(Collider2D other) {
-		if(!other.isTrigger) {
+	void OnCollisionEnter2D(Collision2D col) {
+		if(!col.collider.isTrigger) {
 			isGrounded = true;
 			touchedLastFrame = true;
 		}
 	}
 
-	void OnTriggerStay2D(Collider2D other) {
-		if(!other.isTrigger) {
+	void OnCollisionStay2D(Collision2D col) {
+		if(!col.collider.isTrigger) {
 			isGrounded = true;
 			touchedLastFrame = true;
 		}
