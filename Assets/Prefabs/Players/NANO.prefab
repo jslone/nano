@@ -155,7 +155,7 @@ MonoBehaviour:
   Input: {x: 0, y: 0}
   CameraData:
     Size: 7
-    Offset: {x: 0, y: 4.66666651}
+    Offset: {x: 0, y: 2}
     Margin: {x: 1, y: 1}
     Smooth: {x: 8, y: 8}
   TriggerLayer:
