@@ -139,10 +139,15 @@ MonoBehaviour:
   canMove: 1
   canJump: 1
   Feet: {fileID: 11493492}
+  Input: {x: 0, y: 0}
+  CameraData:
+    Size: 7
+    Offset: {x: 0, y: 6.66666651}
+    Margin: {x: 1, y: 1}
+    Smooth: {x: 8, y: 8}
   TriggerLayer:
     serializedVersion: 2
     m_Bits: 1024
-  Input: {x: 0, y: 0}
 --- !u!114 &11493492
 MonoBehaviour:
   m_ObjectHideFlags: 1

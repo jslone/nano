@@ -7,6 +7,14 @@ public enum Character {
 	PICO
 };
 
+[System.Serializable]
+public struct CameraData {
+	public float Size;
+	public Vector2 Offset;
+	public Vector2 Margin;
+	public Vector2 Smooth;
+}
+
 [RequireComponent (typeof(Rigidbody2D), typeof(Collider2D), typeof(Animator))]
 public class PlayerController : MonoBehaviour {
 	public Character Me;
@@ -24,12 +32,17 @@ public class PlayerController : MonoBehaviour {
 	public Feet Feet;
 	public bool isGrounded { get { return Feet.isGrounded; } }
 
+	// Movement Input
+	public Vector2 Input;
+
+	// Camera data for the CameraController
+	public CameraData CameraData;
+
 	// Trigger / Intractable layer
 	public LayerMask TriggerLayer;
-	
+
+	// Private variables
 	private float lastJump;
-	
-	public Vector2 Input;
 	private Animator animator;
 	new private Rigidbody2D rigidbody2D;	// rigidbody2D is marked as obsolete but not gone
 
