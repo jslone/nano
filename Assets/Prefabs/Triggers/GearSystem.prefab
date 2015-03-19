@@ -586,7 +586,7 @@ MonoBehaviour:
   TriggerOnEnter: 0
   TriggerOnExit: 0
   ChangeEach: 1
-  UseOnce: 0
+  UseOnce: 1
   Gears:
   - {fileID: 23583244}
 --- !u!212 &21201276
