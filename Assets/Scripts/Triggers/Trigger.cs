@@ -34,7 +34,7 @@ public abstract class Trigger : MonoBehaviour {
 			On = !On;
 		}
 		if(UseOnce) {
-			enabled = false;
+			Destroy(this);
 		}
 	}
 }
