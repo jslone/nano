@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LavaPico : MonoBehaviour {
+public class LavaDie : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -15,7 +15,7 @@ public class LavaPico : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col) {
 		if(col.collider.tag == "Lava") {
-			FindObjectOfType<TogglePlayer>().ZoomOut();
+			GetComponent<DeathController>().Die ();
 		}
 	}
 }
