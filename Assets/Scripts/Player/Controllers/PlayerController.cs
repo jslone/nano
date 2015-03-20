@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour {
 	
 	public Feet Feet;
 	public bool isGrounded { get { return Feet.isGrounded; } }
+	public bool isSwinging;
 
 	// Movement Input
 	public Vector2 Input;
@@ -95,9 +96,10 @@ public class PlayerController : MonoBehaviour {
 
 			// Calculate jump movement
 			if(Input.y > 0) {
-				if(canJump && isGrounded && Time.time - lastJump > JumpSpeedDelay) {
+				if(canJump && (isGrounded || isSwinging) && Time.time - lastJump > JumpSpeedDelay) {
 					d.y = JumpSpeed * Input.y;
 					lastJump = Time.time;
+					isSwinging = false;
 				} else if(Time.time - lastJump < JumpSpeedDelay) {
 					d.y += JumpSpeed * JumpSpeedFalloff * Input.y;
 				}
