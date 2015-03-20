@@ -12,7 +12,7 @@ public class InputController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		player.Input.x = Input.GetAxis("Horizontal");
-		player.Input.y = Input.GetAxis("Jump");
+		player.Input.y = Input.GetAxis("Vertical");
 		if(Input.GetButtonDown("Action")) {
 			player.DoAction();
 		}
