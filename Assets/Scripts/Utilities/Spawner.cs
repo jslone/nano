@@ -35,8 +35,6 @@ public class Spawner : MonoBehaviour {
 
 	void Release() {
 		Collider2D[] others = Physics2D.OverlapPointAll(joint.connectedBody.transform.position, AttachLayer);
-		Debug.Log((int)AttachLayer);
-		Debug.Log(others.Length);
 		foreach(Collider2D other in others) {
 			if(other != joint.connectedBody.GetComponent<Collider2D>()) {
 				joint.connectedBody.transform.parent = other.transform;
