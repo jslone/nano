@@ -24,9 +24,6 @@ public class LavaExpel : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(player.isGrounded) {
-			lastSafe = transform.position;
-		}
 	}
 
 	void FixedUpdate() {
@@ -55,6 +52,12 @@ public class LavaExpel : MonoBehaviour {
 			collider2D.enabled = false;
 
 			Invoke("Restore",T);
+		}
+	}
+
+	void OnCollisionStay2D(Collision2D col) {
+		if(col.collider.tag == "Safe") {
+			lastSafe = transform.position;
 		}
 	}
 

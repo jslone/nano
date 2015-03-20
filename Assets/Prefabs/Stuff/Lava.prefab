@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2301382}
   - 33: {fileID: 3397136}
   - 114: {fileID: 11491056}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Lava
   m_TagString: Lava
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaba451d958b44d4d9f3afcea80e3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 5
+  scale: {x: 5, y: 5}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
