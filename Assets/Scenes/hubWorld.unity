@@ -756,7 +756,7 @@ GameObject:
   - 4: {fileID: 892336539}
   m_Layer: 0
   m_Name: NANO_WORLD
-  m_TagString: Untagged
+  m_TagString: NANO
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

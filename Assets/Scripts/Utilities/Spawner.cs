@@ -34,7 +34,6 @@ public class Spawner : MonoBehaviour {
 	}
 
 	void Release() {
-		Debug.Log(transform.position);
 		Collider2D[] others = Physics2D.OverlapPointAll(joint.connectedBody.transform.position, AttachLayer);
 		Debug.Log((int)AttachLayer);
 		Debug.Log(others.Length);
