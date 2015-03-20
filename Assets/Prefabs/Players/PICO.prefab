@@ -184,6 +184,7 @@ MonoBehaviour:
   canMove: 1
   canJump: 1
   Feet: {fileID: 11478346}
+  isSwinging: 0
   Input: {x: 0, y: 0}
   CameraData:
     Size: 2
@@ -205,7 +206,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggle: {fileID: 0}
-  TTL: 60
+  TTL: 10
+  TTD: 2
+  dead: 0
 --- !u!114 &11478346
 MonoBehaviour:
   m_ObjectHideFlags: 1

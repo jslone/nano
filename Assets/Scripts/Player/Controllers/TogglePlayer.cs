@@ -98,12 +98,16 @@ public class TogglePlayer : MonoBehaviour {
 		case Character.NANO:
 			//SwapLevel(Character.NANO, Character.MICRO);
 			break;
-
 		case Character.PICO:
 			// switch to nano
-			Destroy(Player.gameObject);
-			Player = GameObject.Find(Character.NANO.ToString()).GetComponent<PlayerController>();
-			currentCharacter = Character.NANO;
+			PicoDeath death = Player.GetComponent<PicoDeath>();
+			if(!death.dead) {
+				death.Die();
+			} else {
+				Destroy(Player.gameObject);
+				Player = GameObject.Find(Character.NANO.ToString()).GetComponent<PlayerController>();
+				currentCharacter = Character.NANO;
+			}
 			break;
 
 		default:
