@@ -160,7 +160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b49796bc206914f49bdd8ebc5a24aae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2000
+  T: .5
+  v: {x: 0, y: 0}
 --- !u!114 &11455716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -181,6 +182,7 @@ MonoBehaviour:
   canMove: 1
   canJump: 1
   Feet: {fileID: 11491434}
+  isSwinging: 0
   Input: {x: 0, y: 0}
   CameraData:
     Size: 7
