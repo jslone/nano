@@ -96,7 +96,7 @@ public class TogglePlayer : MonoBehaviour {
 	public void ZoomOut() {
 		switch(currentCharacter) {
 		case Character.NANO:
-			SwapLevel(Character.NANO, Character.MICRO);
+			//SwapLevel(Character.NANO, Character.MICRO);
 			break;
 
 		case Character.PICO:
