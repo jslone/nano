@@ -184,6 +184,7 @@ MonoBehaviour:
   canMove: 1
   canJump: 1
   Feet: {fileID: 11478346}
+  isSwinging: 0
   Input: {x: 0, y: 0}
   CameraData:
     Size: 2
