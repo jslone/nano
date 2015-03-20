@@ -44,8 +44,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -168.410004, y: -.430000007, z: 10}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 493492}
   m_Father: {fileID: 0}
@@ -133,8 +133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Me: 0
   Type: 1
-  Speed: 3
-  JumpSpeed: 20
+  Speed: 2.5
+  JumpSpeed: 25
   JumpSpeedDelay: .200000003
   JumpSpeedFalloff: .200000003
   canMove: 1
@@ -142,8 +142,8 @@ MonoBehaviour:
   Feet: {fileID: 11493492}
   Input: {x: 0, y: 0}
   CameraData:
-    Size: 7
-    Offset: {x: 0, y: 4.66666651}
+    Size: 12
+    Offset: {x: 0, y: 5}
     Margin: {x: 1, y: 1}
     Smooth: {x: 8, y: 8}
   TriggerLayer:
