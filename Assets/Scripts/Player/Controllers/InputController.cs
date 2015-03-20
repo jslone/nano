@@ -2,8 +2,18 @@
 using System.Collections;
 
 public class InputController : MonoBehaviour {
-	public PlayerController player;
-	
+	public PlayerController _player;
+	public PlayerController player { 
+		get { return _player; }
+		set
+		{
+			if(_player) {
+				_player.Input = Vector2.zero;
+			}
+			_player = value;
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 	

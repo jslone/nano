@@ -206,8 +206,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggle: {fileID: 0}
-  TTL: 10
-  TTD: 2
+  TTL: 60
+  DeathSpeed: 10
   dead: 0
 --- !u!114 &11478346
 MonoBehaviour:

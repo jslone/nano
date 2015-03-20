@@ -4,7 +4,8 @@ using System.Collections;
 public class PicoDeath : DeathController {
 	public TogglePlayer toggle;
 	public float TTL;
-	public float TTD;
+	public float DeathSpeed;
+	private float TTD;
 	private Vector3 deathPos;
 	private float timeOfDeath;
 	public bool dead;
@@ -33,6 +34,7 @@ public class PicoDeath : DeathController {
 		deathPos = transform.position;
 		dead = true;
 		timeOfDeath = Time.time;
+		TTD = (transform.parent.position - transform.position).magnitude / DeathSpeed;
 		GetComponent<Collider2D>().enabled = false;
 	}
 }

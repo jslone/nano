@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour {
 		// Get stored location
 		if(Me == Character.PICO) {
 			transform.parent = GameObject.Find(Character.NANO.ToString()).transform;
-			transform.localPosition = Vector3.right;
+			transform.localPosition = Vector3.right * 0.25f;
 		}
 	}
 	
