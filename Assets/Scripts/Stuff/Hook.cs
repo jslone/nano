@@ -13,10 +13,11 @@ public class Hook : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetAxis("Vertical") < 0) {
-			//child.GetComponent<Rigidbody2D>().isKinematic = true;
-			joint.connectedBody = null;
-			joint.enabled = false;
+		if(Input.GetAxis("Vertical") != 0) {
+			if(joint.connectedBody) {
+				joint.connectedBody = null;
+				joint.enabled = false;
+			}
 		}
 	}
 
@@ -25,6 +26,8 @@ public class Hook : MonoBehaviour {
 			joint.enabled = true;
 			joint.connectedBody = other.GetComponent<Rigidbody2D>();
 			joint.connectedAnchor = other.transform.Find("Head").localPosition;
+
+			other.GetComponent<PlayerController>().isSwinging = true;
 		}
 	}
 }
