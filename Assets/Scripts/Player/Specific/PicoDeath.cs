@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PicoDeath : DeathController {
@@ -9,6 +10,8 @@ public class PicoDeath : DeathController {
 	private Vector3 deathPos;
 	private float timeOfDeath;
 	public bool dead;
+	public Text timer;
+
 	// Use this for initialization
 	void Start () {
 		toggle = FindObjectOfType<TogglePlayer>();
@@ -17,6 +20,7 @@ public class PicoDeath : DeathController {
 	// Update is called once per frame
 	void Update () {
 		TTL -= Time.deltaTime;
+		timer.text = dead ? "" : TTL.ToString("F1");
 		if(dead) {
 			if(Time.time - timeOfDeath > TTD) {
 				toggle.ZoomOut();
