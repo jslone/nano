@@ -50,7 +50,7 @@ public class CameraController : MonoBehaviour
         return Mathf.Abs(transform.position.y - pos.y) > margin.y;
     }
 
-	void Start()
+	void Awake()
 	{
 		camera = GetComponent<Camera>();
 	}
