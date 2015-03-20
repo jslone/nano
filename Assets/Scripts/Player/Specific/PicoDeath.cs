@@ -19,6 +19,12 @@ public class PicoDeath : DeathController {
 	
 	// Update is called once per frame
 	void Update () {
+
+		Vector3 scale = timer.rectTransform.localScale;
+		scale.x = Mathf.Sign(transform.localScale.x) * Mathf.Abs(scale.x);
+		timer.rectTransform.localScale = scale;
+
+
 		TTL -= Time.deltaTime;
 		timer.text = dead ? "" : TTL.ToString("F1");
 		if(dead) {
