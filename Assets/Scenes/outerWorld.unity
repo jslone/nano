@@ -846,18 +846,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 198074, guid: 2780b3d58390f44d28f36e9d9bf77735, type: 2}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 11410810, guid: 2780b3d58390f44d28f36e9d9bf77735, type: 2}
-      propertyPath: offset.y
-      value: 4.66666651
-      objectReference: {fileID: 0}
-    - target: {fileID: 198074, guid: 2780b3d58390f44d28f36e9d9bf77735, type: 2}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2780b3d58390f44d28f36e9d9bf77735, type: 2}
   m_IsPrefabParent: 0

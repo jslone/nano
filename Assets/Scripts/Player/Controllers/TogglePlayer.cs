@@ -25,10 +25,7 @@ public class TogglePlayer : MonoBehaviour {
 
 	// default levels
 	private static int[] defaultLevels = {0,1};
-	private static List<GameObject>[] worlds = new List<GameObject>[] {
-		new List<GameObject>(),
-		new List<GameObject>()
-	};
+	private static GameObject[] disabledWorld;
 
 	// Use this for initialization
 	void Start () {
@@ -39,7 +36,6 @@ public class TogglePlayer : MonoBehaviour {
 		else
 		{
 			Player = GameObject.Find(currentCharacter.ToString()).GetComponent<PlayerController>();
-			CacheWorld(currentCharacter);
 		}
 	}
 	
@@ -54,38 +50,30 @@ public class TogglePlayer : MonoBehaviour {
 		}
 	}
 
-	void CacheWorld(Character current)
-	{
-		GameObject[] world = GameObject.FindGameObjectsWithTag(currentCharacter.ToString());
-		foreach (GameObject g in world)
-		{
-			worlds[(int)currentCharacter].Add(g);
-		}
-	}
-
 	void SwapLevel(Character current, Character next)
 	{
 		// disable micros world
-		foreach(GameObject g in worlds[(int)current])
+		GameObject[] currentWorld = GameObject.FindGameObjectsWithTag(current.ToString());
+		foreach(GameObject g in currentWorld)
 		{
 			g.SetActive(false);
 		}
 
 		// if nano's world can't be found, load it
-		if (worlds[(int)next].Count == 0)
+		if (disabledWorld == null || disabledWorld.Length == 0)
 		{
 			Application.LoadLevelAdditive(defaultLevels[(int)next]);
-			CacheWorld(next);
 		}
-		
 		// otherwise activate nano's world
 		else
 		{
-			foreach (GameObject g in worlds[(int)next])
+			foreach (GameObject g in disabledWorld)
 			{
 				g.SetActive(true);
 			}
 		}
+
+		disabledWorld = currentWorld;
 	}
 	
 	public void ZoomIn() {
