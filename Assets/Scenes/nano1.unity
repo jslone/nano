@@ -928,6 +928,18 @@ Prefab:
       propertyPath: UseOnce
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 401278, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -.899999976
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401276, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
+      propertyPath: TriggerOnEnter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 401280, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
   m_IsPrefabParent: 0
