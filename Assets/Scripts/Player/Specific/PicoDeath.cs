@@ -17,8 +17,6 @@ public class PicoDeath : DeathController {
 	void Update () {
 		TTL -= Time.deltaTime;
 		if(dead) {
-			Debug.Log(Time.time);
-			Debug.Log(timeOfDeath);
 			if(Time.time - timeOfDeath > TTD) {
 				toggle.ZoomOut();
 			} else {
