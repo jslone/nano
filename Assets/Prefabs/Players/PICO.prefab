@@ -230,7 +230,7 @@ MonoBehaviour:
   Me: 2
   Type: 0
   Speed: 6
-  JumpSpeed: 14
+  JumpSpeed: 13
   JumpSpeedDelay: .200000003
   JumpSpeedFalloff: .200000003
   canMove: 1
