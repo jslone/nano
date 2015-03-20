@@ -36,6 +36,7 @@ public class Spawner : MonoBehaviour {
 		Collider2D other = Physics2D.OverlapPoint(transform.position,AttachLayer);
 		if(other) {
 			joint.connectedBody.transform.parent = other.transform;
+			joint.connectedBody.isKinematic = true;
 		}
 		joint.connectedBody = null;
 		joint.enabled = false;
