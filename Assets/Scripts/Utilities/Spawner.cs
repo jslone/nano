@@ -29,15 +29,21 @@ public class Spawner : MonoBehaviour {
 
 	void Spawn() {
 		joint.connectedBody = ((GameObject)Instantiate(Prefab,transform.position,transform.rotation)).GetComponent<Rigidbody2D>();
-		joint.connectedBody.transform.parent = transform;
+		joint.connectedBody.transform.parent = transform.parent.parent;
 		joint.enabled = true;
 	}
 
 	void Release() {
-		Collider2D other = Physics2D.OverlapPoint(transform.position,AttachLayer);
-		if(other) {
-			joint.connectedBody.transform.parent = other.transform;
-			joint.connectedBody.isKinematic = true;
+		Debug.Log(transform.position);
+		Collider2D[] others = Physics2D.OverlapPointAll(joint.connectedBody.transform.position, AttachLayer);
+		Debug.Log((int)AttachLayer);
+		Debug.Log(others.Length);
+		foreach(Collider2D other in others) {
+			if(other != joint.connectedBody.GetComponent<Collider2D>()) {
+				joint.connectedBody.transform.parent = other.transform;
+				joint.connectedBody.isKinematic = true;
+				break;
+			}
 		}
 		joint.connectedBody = null;
 		joint.enabled = false;
