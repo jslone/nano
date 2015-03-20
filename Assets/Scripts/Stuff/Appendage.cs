@@ -2,7 +2,7 @@
 using System.Collections;
 
 [RequireComponent (typeof(Collider2D))]
-public class Apendage : MonoBehaviour {
+public class Appendage : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
