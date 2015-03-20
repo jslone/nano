@@ -150,7 +150,7 @@ MonoBehaviour:
   Me: 2
   Type: 0
   Speed: 10
-  JumpSpeed: 15
+  JumpSpeed: 20
   JumpSpeedDelay: .200000003
   JumpSpeedFalloff: .200000003
   canMove: 1
@@ -161,7 +161,7 @@ MonoBehaviour:
     Size: 2
     Offset: {x: 0, y: .666666687}
     Margin: {x: 1, y: 1}
-    Smooth: {x: 2, y: 4}
+    Smooth: {x: 4, y: 4}
   TriggerLayer:
     serializedVersion: 2
     m_Bits: 1024

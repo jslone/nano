@@ -134,16 +134,16 @@ MonoBehaviour:
   Me: 0
   Type: 1
   Speed: 3
-  JumpSpeed: 30
+  JumpSpeed: 20
   JumpSpeedDelay: .200000003
-  JumpSpeedFalloff: 1
+  JumpSpeedFalloff: .200000003
   canMove: 1
   canJump: 1
   Feet: {fileID: 11493492}
   Input: {x: 0, y: 0}
   CameraData:
     Size: 7
-    Offset: {x: 0, y: 6.66666651}
+    Offset: {x: 0, y: 4.66666651}
     Margin: {x: 1, y: 1}
     Smooth: {x: 8, y: 8}
   TriggerLayer:
