@@ -12,7 +12,7 @@ GameObject:
   - 61: {fileID: 6155632}
   - 114: {fileID: 11438090}
   m_Layer: 10
-  m_Name: Apendage
+  m_Name: Appendage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
