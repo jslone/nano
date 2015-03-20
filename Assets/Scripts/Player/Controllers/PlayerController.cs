@@ -7,6 +7,11 @@ public enum Character {
 	PICO
 };
 
+public enum Controls {
+	ARCADE,
+	SMOOTH
+};
+
 [System.Serializable]
 public struct CameraData {
 	public float Size;
@@ -18,6 +23,7 @@ public struct CameraData {
 [RequireComponent (typeof(Rigidbody2D), typeof(Collider2D), typeof(Animator))]
 public class PlayerController : MonoBehaviour {
 	public Character Me;
+	public Controls Type;
 
 	// Movement attributes
 	public float Speed;
@@ -82,21 +88,27 @@ public class PlayerController : MonoBehaviour {
 			if((facingRight && Input.x < 0) || (!facingRight && Input.x > 0))
 				Flip();
 
-			Vector3 d = Vector2.zero;
+			Vector3 d = Type == Controls.ARCADE ? rigidbody2D.velocity : Vector2.zero;
 
 			// Calculate run movement
 			d.x = Speed * Input.x;
 
 			// Calculate jump movement
-			if(canJump && isGrounded) {
-				d.y = JumpSpeed * Input.y;
-				lastJump = Time.time;
-			} else if(Time.time - lastJump < JumpSpeedDelay) {
-				d.y = JumpSpeedFalloff * (JumpSpeed * Input.y);
+			if(Input.y > 0) {
+				if(canJump && isGrounded && Time.time - lastJump > JumpSpeedDelay) {
+					d.y = JumpSpeed * Input.y;
+					lastJump = Time.time;
+				} else if(Time.time - lastJump < JumpSpeedDelay) {
+					d.y += JumpSpeed * JumpSpeedFalloff * Input.y;
+				}
 			}
 
 			// Apply movement
-			rigidbody2D.AddForce(d, ForceMode2D.Impulse);
+			if(Type == Controls.ARCADE) {
+				rigidbody2D.velocity = d;
+			} else {
+				rigidbody2D.AddForce(d, ForceMode2D.Impulse);
+			}
 		}
 	}
 

@@ -148,9 +148,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Me: 2
+  Type: 0
   Speed: 3
   JumpSpeed: 30
-  JumpSpeedDelay: .200000003
+  JumpSpeedDelay: .100000001
   JumpSpeedFalloff: .100000001
   canMove: 1
   canJump: 1

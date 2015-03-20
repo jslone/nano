@@ -45,7 +45,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.75999999, y: .5, z: 0}
+  m_LocalPosition: {x: -11.3999996, y: -2.44000006, z: 10}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 491434}
@@ -85,7 +85,7 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191434}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1aa457a24e95e4dcab2fa856626b212f, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -98,7 +98,7 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155716}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1aa457a24e95e4dcab2fa856626b212f, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: .625}
@@ -145,10 +145,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Me: 1
-  Speed: 3
-  JumpSpeed: 30
+  Type: 0
+  Speed: 10
+  JumpSpeed: 15
   JumpSpeedDelay: .200000003
-  JumpSpeedFalloff: .100000001
+  JumpSpeedFalloff: .200000003
   canMove: 1
   canJump: 1
   Feet: {fileID: 11491434}
