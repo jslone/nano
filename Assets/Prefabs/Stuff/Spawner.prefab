@@ -60,7 +60,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 115900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.30000019, y: 4.13999987, z: 10}
+  m_LocalPosition: {x: 88.3000031, y: 13.1000004, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 462782}
@@ -97,7 +97,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174978}
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 2
   m_AngularDrag: .0500000007
   m_GravityScale: 4
@@ -149,7 +149,7 @@ MonoBehaviour:
   Prefab: {fileID: 129708, guid: 680f4c19d948b4273bc65b3894c413e8, type: 2}
   AttachLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4096
   Offset: 0
   Timer: 10
   Extender: {fileID: 23297884}
@@ -223,7 +223,7 @@ DistanceJoint2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174978}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0}

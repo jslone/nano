@@ -29,6 +29,7 @@ public class Spawner : MonoBehaviour {
 
 	void Spawn() {
 		joint.connectedBody = ((GameObject)Instantiate(Prefab,transform.position,transform.rotation)).GetComponent<Rigidbody2D>();
+		joint.connectedBody.transform.parent = transform;
 		joint.enabled = true;
 	}
 
