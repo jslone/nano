@@ -3,7 +3,8 @@ using System.Collections;
 
 [RequireComponent (typeof (Collider2D))]
 public class LoadLevel : MonoBehaviour {
-	public int level;
+	public string level;
+	private bool hasLoaded = false;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +17,10 @@ public class LoadLevel : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		Application.LoadLevelAdditive(level);
-		Destroy(this);
+		if (!hasLoaded) {
+			Application.LoadLevelAdditive(level);
+			hasLoaded = true;
+			Destroy(this);
+		}
 	}
 }
