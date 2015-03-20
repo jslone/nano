@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent (typeof(Collider2D))]
+[RequireComponent (typeof(Collider2D), typeof(AnchoredJoint2D))]
 public class Hook : MonoBehaviour {
 	AnchoredJoint2D joint;
 
