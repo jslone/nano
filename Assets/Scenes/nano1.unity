@@ -180,12 +180,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 23584454, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23584454, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
-      propertyPath: m_Anchor.y
+    - target: {fileID: 160336, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
