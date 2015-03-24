@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WheelDriver : MonoBehaviour {
+public class WheelDoorDriver : MonoBehaviour {
 	public Rigidbody2D driver;
 	public DirectionalSliderJoint2D[] reciever;
 	public float Scale;
