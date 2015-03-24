@@ -5,6 +5,7 @@ public class SpinGear : MonoBehaviour {
 	public WheelJoint2D wheel;
 	public PlayerController player;
 	public float Scale;
+	public float CameraZoom = 10;
 	public Vector3 Offset;
 	// Use this for initialization
 	void Start () {
@@ -35,7 +36,7 @@ public class SpinGear : MonoBehaviour {
 		if(other.tag == Character.PICO.ToString()) {
 			player = other.GetComponent<PlayerController>();
 			CameraData cam = new CameraData(player.CameraData);
-			cam.Size *= 2;
+			cam.Size = CameraZoom;
 			FindObjectOfType<CameraController>().playerCamera = cam;
 		}
 	}
