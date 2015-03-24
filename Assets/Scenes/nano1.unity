@@ -468,7 +468,7 @@ Transform:
   m_GameObject: {fileID: 287984008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 32.1900024, y: 2.45000029, z: 100}
-  m_LocalScale: {x: 500, y: 200, z: 1}
+  m_LocalScale: {x: 200, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 1954679030}
   m_RootOrder: 10
@@ -1364,11 +1364,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 455716, guid: 702a0a2cd50b8478c9c2c3165ee8a101, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.93999958
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 455716, guid: 702a0a2cd50b8478c9c2c3165ee8a101, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -.810000002
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 455716, guid: 702a0a2cd50b8478c9c2c3165ee8a101, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2316,7 +2316,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1459449256
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2435,7 +2435,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 416446, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.6500001
+      value: 7.4000001
       objectReference: {fileID: 0}
     - target: {fileID: 416446, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2467,11 +2467,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 416446, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
       propertyPath: m_LocalScale.x
-      value: .5
+      value: .400000006
       objectReference: {fileID: 0}
     - target: {fileID: 416446, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
       propertyPath: m_LocalScale.y
-      value: .5
+      value: .400000006
       objectReference: {fileID: 0}
     - target: {fileID: 21221190, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
       propertyPath: m_Color.r
@@ -2487,7 +2487,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11407732, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
       propertyPath: Scale
-      value: -2
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 11407732, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
       propertyPath: reciever
@@ -2749,7 +2749,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -402.059998, y: -149.460007}
+  m_AnchoredPosition: {x: -402.279999, y: -149.130005}
   m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1844112225
