@@ -14,6 +14,14 @@ public enum Controls {
 
 [System.Serializable]
 public struct CameraData {
+	public CameraData(CameraData cam) {
+		Track = cam.Track;
+		Size = cam.Size;
+		Offset = cam.Offset;
+		Margin = cam.Margin;
+		Smooth = cam.Smooth;
+	}
+	public Transform Track;
 	public float Size;
 	public Vector2 Offset;
 	public Vector2 Margin;

@@ -3,9 +3,29 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour
 {
+	private bool lastSet = false;
+	private CameraData _lastPlayerCamera;
+	private CameraData _currentPlayerCamera;
+	public CameraData playerCamera
+	{
+		get
+		{
+			return _currentPlayerCamera;
+		}
+		set
+		{
+			if(!lastSet) {
+				_lastPlayerCamera = value;
+				lastSet = true;
+			} else {
+				_lastPlayerCamera = _currentPlayerCamera;
+			}
+			_currentPlayerCamera = value;
+			lastPlayerChange = Time.time;
+		}
+	}
+
 	private PlayerController _player;
-	private CameraData lastPlayerCamera;
-	private Vector2 lastPlayerPos;
 	public PlayerController player 		// Reference to the player's transform.
 	{
 		get
@@ -14,19 +34,11 @@ public class CameraController : MonoBehaviour
 		}
 		set
 		{
-			if(_player == null) {
-				camera.orthographicSize = value.CameraData.Size;
-				offset = value.CameraData.Offset;
-				margin = value.CameraData.Margin;
-				smooth = value.CameraData.Smooth;
-			} else {
-				lastPlayerCamera = _player.CameraData;
-				lastPlayerPos = _player.transform.position;
-				lastPlayerChange = Time.time;
-			}
 			_player = value;
+			playerCamera = value.CameraData;
 		}
 	}
+
 	public float changeSpeed;			// Rate at which camera changes players
     public Vector2 offset;              // Offset camera from center of player
 	public Vector2 margin;				// Distance the player can move before the camera follows.
@@ -68,19 +80,14 @@ public class CameraController : MonoBehaviour
 
     void TrackPlayer()
     {
-		// Switch to new player
-		if(lastPlayerChange > 0.0f)
-		{
-			camera.orthographicSize = Mathf.Lerp(lastPlayerCamera.Size, player.CameraData.Size, changeSpeed * (Time.time - lastPlayerChange));
-			offset = Vector2.Lerp(lastPlayerCamera.Offset, player.CameraData.Offset, changeSpeed * (Time.time - lastPlayerChange));
-			margin = Vector2.Lerp(lastPlayerCamera.Margin, player.CameraData.Margin, changeSpeed * (Time.time - lastPlayerChange));
-			smooth = Vector2.Lerp(lastPlayerCamera.Smooth, player.CameraData.Smooth, changeSpeed * (Time.time - lastPlayerChange));
-			playerPos = Vector2.Lerp(lastPlayerPos, player.transform.position, changeSpeed * (Time.time - lastPlayerChange));
-		}
-		// Update player position
-		else
-		{
-			playerPos = player.transform.position;
+		camera.orthographicSize = Mathf.Lerp(_lastPlayerCamera.Size, _currentPlayerCamera.Size, changeSpeed * (Time.time - lastPlayerChange));
+		offset = Vector2.Lerp(_lastPlayerCamera.Offset, _currentPlayerCamera.Offset, changeSpeed * (Time.time - lastPlayerChange));
+		margin = Vector2.Lerp(_lastPlayerCamera.Margin, _currentPlayerCamera.Margin, changeSpeed * (Time.time - lastPlayerChange));
+		smooth = Vector2.Lerp(_lastPlayerCamera.Smooth, _currentPlayerCamera.Smooth, changeSpeed * (Time.time - lastPlayerChange));
+		if(_lastPlayerCamera.Track) {
+			playerPos = Vector2.Lerp(_lastPlayerCamera.Track.position, _currentPlayerCamera.Track.position, changeSpeed * (Time.time - lastPlayerChange));
+		} else {
+			playerPos = _currentPlayerCamera.Track.position;
 		}
 
         // By default the target x and y coordinates of the camera are its current x and y coordinates.

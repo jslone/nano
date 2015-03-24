@@ -239,6 +239,7 @@ MonoBehaviour:
   isSwinging: 0
   Input: {x: 0, y: 0}
   CameraData:
+    Track: {fileID: 435226}
     Size: 2
     Offset: {x: 0, y: .666666687}
     Margin: {x: 1, y: 1}

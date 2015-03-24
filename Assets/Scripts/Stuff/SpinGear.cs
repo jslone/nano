@@ -34,6 +34,9 @@ public class SpinGear : MonoBehaviour {
 		Debug.Log(other.name);
 		if(other.tag == Character.PICO.ToString()) {
 			player = other.GetComponent<PlayerController>();
+			CameraData cam = new CameraData(player.CameraData);
+			cam.Size *= 2;
+			FindObjectOfType<CameraController>().playerCamera = cam;
 		}
 	}
 }
