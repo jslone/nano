@@ -2075,6 +2075,18 @@ Prefab:
       propertyPath: CameraZoom
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11477134, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
+      propertyPath: camData.Offset.x
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477134, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
+      propertyPath: camData.Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477134, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
+      propertyPath: camData.Size
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11407732, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
@@ -2663,6 +2675,18 @@ Prefab:
       propertyPath: CameraZoom
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11477134, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
+      propertyPath: camData.Size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477134, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
+      propertyPath: camData.Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477134, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
+      propertyPath: camData.Offset.x
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
   m_IsPrefabParent: 0
@@ -2913,6 +2937,14 @@ Prefab:
     - target: {fileID: 11477134, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
       propertyPath: CameraZoom
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477134, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
+      propertyPath: camData.Size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477134, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
+      propertyPath: camData.Offset.y
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
