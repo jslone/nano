@@ -2107,6 +2107,10 @@ Prefab:
       propertyPath: reciever.Array.data[1]
       value: 
       objectReference: {fileID: 974376185}
+    - target: {fileID: 11477134, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
+      propertyPath: CameraZoom
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
   m_IsPrefabParent: 0
@@ -2391,6 +2395,10 @@ Prefab:
       propertyPath: reciever.Array.data[1]
       value: 
       objectReference: {fileID: 974376185}
+    - target: {fileID: 11477134, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
+      propertyPath: CameraZoom
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
   m_IsPrefabParent: 0
