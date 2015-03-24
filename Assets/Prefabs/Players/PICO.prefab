@@ -230,7 +230,7 @@ MonoBehaviour:
   Me: 2
   Type: 0
   Speed: 6
-  JumpSpeed: 13
+  JumpSpeed: 12
   JumpSpeedDelay: .200000003
   JumpSpeedFalloff: .200000003
   canMove: 1
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggle: {fileID: 0}
-  TTL: 15
+  TTL: 10
   DeathSpeed: 10
   dead: 0
   timer: {fileID: 11497700}
