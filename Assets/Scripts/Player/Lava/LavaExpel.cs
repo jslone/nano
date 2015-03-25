@@ -51,6 +51,11 @@ public class LavaExpel : MonoBehaviour {
 			player.canCollide = false;
 			rigidbody2D.isKinematic = true;
 
+			TogglePlayer tp = FindObjectOfType<TogglePlayer>();
+			if(tp.currentCharacter == Character.PICO) {
+				tp.ZoomOut();
+			}
+
 			Invoke("Restore",T);
 		}
 	}

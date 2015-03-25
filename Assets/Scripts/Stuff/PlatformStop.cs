@@ -15,15 +15,11 @@ public class PlatformStop : MonoBehaviour {
 				JointMotor2D motor = slider.motor;
 				motor.motorSpeed -= speed;
 				slider.motor = motor;
-				Debug.Log(speed);
-				Debug.Log(slider.motor.motorSpeed);
 			}
 			if(_onPlatform & !value) {
 				JointMotor2D motor = slider.motor;
 				motor.motorSpeed += speed;
 				slider.motor = motor;
-				Debug.Log(speed);
-				Debug.Log(slider.motor.motorSpeed);
 			}
 			_onPlatform = value;
 		}
