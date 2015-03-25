@@ -8,7 +8,7 @@ public class InputController : MonoBehaviour {
 		set
 		{
 			if(_player) {
-				_player.Input = Vector2.zero;
+				_player.vInput = Vector2.zero;
 			}
 			_player = value;
 		}
@@ -21,10 +21,11 @@ public class InputController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		player.Input.x = Input.GetAxis("Horizontal");
-		player.Input.y = Input.GetAxis("Vertical");
+		player.vInput.x = Input.GetAxis("Horizontal");
+		player.vInput.y = Input.GetAxis("Vertical");
 		if(Input.GetButtonDown("Action")) {
 			player.DoAction();
+			player.UseDoor();
 		}
 	}
 }

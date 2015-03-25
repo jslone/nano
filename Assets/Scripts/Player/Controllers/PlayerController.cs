@@ -58,14 +58,15 @@ public class PlayerController : MonoBehaviour {
 	public bool isGrounded { get { return Feet.isGrounded; } }
 	public bool isSwinging;
 
-	// Movement Input
-	public Vector2 Input;
+	// Movement vInput
+	public Vector2 vInput;
 
 	// Camera data for the CameraController
 	public CameraData CameraData;
 
 	// Trigger / Intractable layer
 	public LayerMask TriggerLayer;
+	public LayerMask DoorLayer;
 
 	// Private variables
 	private float lastJump;
@@ -78,7 +79,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 
 		// Initialize components
-		Input = Vector2.zero;
+		vInput = Vector2.zero;
 		animator = GetComponent<Animator>();
 		rigidbody2D = GetComponent<Rigidbody2D>();
 
@@ -92,7 +93,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		// update animator parameters
-		animator.SetFloat("speed",Mathf.Abs(Input.x));
+		animator.SetFloat("speed",Mathf.Abs(vInput.x));
 	}
 
 	void Flip() {
@@ -105,22 +106,22 @@ public class PlayerController : MonoBehaviour {
 	// Fixed update called every physics update
 	void FixedUpdate() {
 		if(canMove) {
-			if((facingRight && Input.x < 0) || (!facingRight && Input.x > 0))
+			if((facingRight && vInput.x < 0) || (!facingRight && vInput.x > 0))
 				Flip();
 
 			Vector3 d = Type == Controls.ARCADE ? rigidbody2D.velocity : Vector2.zero;
 
 			// Calculate run movement
-			d.x = Speed * Input.x;
+			d.x = Speed * vInput.x;
 
 			// Calculate jump movement
-			if(Input.y > 0) {
+			if(vInput.y > 0) {
 				if(canJump && (isGrounded || isSwinging) && Time.time - lastJump > JumpSpeedDelay) {
-					d.y = JumpSpeed * Input.y;
+					d.y = JumpSpeed * vInput.y;
 					lastJump = Time.time;
 					isSwinging = false;
 				} else if(Time.time - lastJump < JumpSpeedDelay) {
-					d.y += JumpSpeed * JumpSpeedFalloff * Input.y;
+					d.y += JumpSpeed * JumpSpeedFalloff * vInput.y;
 				}
 			}
 
@@ -135,9 +136,17 @@ public class PlayerController : MonoBehaviour {
 
 	// Do something with a trigger
 	public void DoAction() {
-		Collider2D col = Physics2D.OverlapPoint(transform.position,TriggerLayer);
+		Collider2D col = Physics2D.OverlapPoint(transform.FindChild("Head").position,TriggerLayer);
 		if(col) {
 			col.GetComponent<Trigger>().OnTrigger();
+		}
+	}
+
+	// Enter a door
+	public void UseDoor() {
+		Collider2D col = Physics2D.OverlapPoint(transform.FindChild("Head").position,DoorLayer);
+		if(col) {
+			col.GetComponent<LevelDoor>().EndScene();
 		}
 	}
 }

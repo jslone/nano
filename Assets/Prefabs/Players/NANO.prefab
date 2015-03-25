@@ -192,6 +192,9 @@ MonoBehaviour:
   TriggerLayer:
     serializedVersion: 2
     m_Bits: 1024
+  DoorLayer:
+    serializedVersion: 2
+    m_Bits: 16384
 --- !u!114 &11491434
 MonoBehaviour:
   m_ObjectHideFlags: 1
