@@ -20,9 +20,9 @@ public class PicoDeath : DeathController {
 	// Update is called once per frame
 	void Update () {
 
-		Vector3 scale = timer.rectTransform.localScale;
-		scale.x = Mathf.Sign(transform.localScale.x) * Mathf.Abs(scale.x);
-		timer.rectTransform.localScale = scale;
+		Vector3 localScale = timer.rectTransform.localScale;
+		localScale.x = Mathf.Sign(transform.lossyScale.x) * Mathf.Abs(localScale.x);
+		timer.rectTransform.localScale = localScale;
 
 
 		TTL -= Time.deltaTime;
