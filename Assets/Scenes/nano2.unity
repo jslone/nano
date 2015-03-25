@@ -857,7 +857,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 401276, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -16
+      value: -16.5
       objectReference: {fileID: 0}
     - target: {fileID: 401276, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_LocalPosition.y
@@ -909,11 +909,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 401276, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.10000002
+      value: 1.20000005
       objectReference: {fileID: 0}
     - target: {fileID: 401276, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.10000002
+      value: 1.20000005
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
@@ -2119,6 +2119,18 @@ Prefab:
       propertyPath: CameraZoom
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11477134, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
+      propertyPath: camData.Offset.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477134, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
+      propertyPath: camData.Offset.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477134, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
+      propertyPath: camData.Size
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
   m_IsPrefabParent: 0
@@ -2307,7 +2319,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 23583244, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_Motor.m_MotorSpeed
-      value: 150
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 101276, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_IsActive
@@ -2406,6 +2418,18 @@ Prefab:
     - target: {fileID: 11477134, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
       propertyPath: CameraZoom
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477134, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
+      propertyPath: camData.Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477134, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
+      propertyPath: camData.Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477134, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
+      propertyPath: camData.Size
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ebcdfe65f013940bcb7d2b6a8f4ada28, type: 2}
