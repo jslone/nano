@@ -1849,11 +1849,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 401276, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.52999997
+      value: 28.7000008
       objectReference: {fileID: 0}
     - target: {fileID: 401276, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.25999999
+      value: 2.29999995
       objectReference: {fileID: 0}
     - target: {fileID: 401276, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1926,6 +1926,10 @@ Prefab:
     - target: {fileID: 23583244, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_Motor.m_MotorSpeed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 401276, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
+      propertyPath: m_LocalScale.x
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
@@ -2286,7 +2290,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 401276, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 12.6000004
+      value: 19.5100002
       objectReference: {fileID: 0}
     - target: {fileID: 401276, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2336,6 +2340,10 @@ Prefab:
       propertyPath: m_Motor.m_MotorSpeed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 401276, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
   m_IsPrefabParent: 0
@@ -2352,7 +2360,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 401276, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4.5
+      value: 11.3000002
       objectReference: {fileID: 0}
     - target: {fileID: 401276, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2401,6 +2409,10 @@ Prefab:
     - target: {fileID: 23583244, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_Motor.m_MotorSpeed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 401276, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
+      propertyPath: m_LocalScale.x
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
