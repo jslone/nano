@@ -32,10 +32,10 @@ public class PicoDeath : DeathController {
 				toggle.ZoomOut();
 			} else {
 				Vector3 to = transform.parent.position;
-				transform.position = Vector3.Slerp(deathPos,to,(Time.time - timeOfDeath) / TTD);
+				transform.position = Vector3.Lerp(deathPos,to,(Time.time - timeOfDeath) / TTD);
 			}
 		} else if(TTL < 0) {
-			Die();
+			//Die();
 		}
 	}
 
@@ -46,5 +46,6 @@ public class PicoDeath : DeathController {
 		timeOfDeath = Time.time;
 		TTD = (transform.parent.position - transform.position).magnitude / DeathSpeed;
 		GetComponent<Collider2D>().enabled = false;
+		GetComponent<Rigidbody2D>().isKinematic = true;
 	}
 }

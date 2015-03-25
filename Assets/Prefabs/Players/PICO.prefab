@@ -39,7 +39,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &145466
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +223,7 @@ MonoBehaviour:
   canJump: 1
   Feet: {fileID: 11478346}
   isSwinging: 0
-  Input: {x: 0, y: 0}
+  vInput: {x: 0, y: 0}
   CameraData:
     Track: {fileID: 435226}
     Size: 2
