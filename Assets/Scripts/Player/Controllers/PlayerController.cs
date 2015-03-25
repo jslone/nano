@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		// update animator parameters
-		animator.SetFloat("speed",Mathf.Abs(vInput.x));
+		animator.SetFloat("speed",canMove ? Mathf.Abs(vInput.x) : 0);
 	}
 
 	void Flip() {
@@ -145,7 +145,8 @@ public class PlayerController : MonoBehaviour {
 	// Enter a door
 	public void UseDoor() {
 		Collider2D col = Physics2D.OverlapPoint(transform.FindChild("Head").position,DoorLayer);
-		if(col) {
+		if(Me == Character.NANO && col) {
+			canMove = false;
 			col.GetComponent<LevelDoor>().EndScene();
 		}
 	}
