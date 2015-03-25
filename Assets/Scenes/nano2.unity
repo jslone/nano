@@ -150,11 +150,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 455716, guid: 702a0a2cd50b8478c9c2c3165ee8a101, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6.26000023
+      value: -3.44000006
       objectReference: {fileID: 0}
     - target: {fileID: 455716, guid: 702a0a2cd50b8478c9c2c3165ee8a101, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.31999993
+      value: -2.57999992
       objectReference: {fileID: 0}
     - target: {fileID: 455716, guid: 702a0a2cd50b8478c9c2c3165ee8a101, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1761,6 +1761,14 @@ Prefab:
       propertyPath: m_TagString
       value: Safe
       objectReference: {fileID: 0}
+    - target: {fileID: 6132300, guid: 8eb062f6745a2fa489f590b2c01c3286, type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 7dc3c0a3c8cb84adaa2e396f0c3ecb2d, type: 2}
+    - target: {fileID: 186566, guid: 8eb062f6745a2fa489f590b2c01c3286, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8eb062f6745a2fa489f590b2c01c3286, type: 2}
   m_IsPrefabParent: 0
@@ -1787,7 +1795,7 @@ SliderJoint2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1017547614}
   m_Enabled: 1
-  m_CollideConnected: 0
+  m_CollideConnected: 1
   m_ConnectedRigidBody: {fileID: 2010818070}
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}

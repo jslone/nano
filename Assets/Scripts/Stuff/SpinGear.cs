@@ -35,6 +35,7 @@ public class SpinGear : MonoBehaviour {
 		Debug.Log(other.name);
 		if(other.tag == Character.PICO.ToString()) {
 			player = other.GetComponent<PlayerController>();
+			player.canCollide = false;
 			FindObjectOfType<CameraController>().playerCamera = camData;
 		}
 	}

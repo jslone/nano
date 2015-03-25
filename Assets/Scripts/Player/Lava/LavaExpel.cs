@@ -48,8 +48,8 @@ public class LavaExpel : MonoBehaviour {
 			}
 
 			player.canMove = false;
+			player.canCollide = false;
 			rigidbody2D.isKinematic = true;
-			collider2D.enabled = false;
 
 			Invoke("Restore",T);
 		}
@@ -64,7 +64,7 @@ public class LavaExpel : MonoBehaviour {
 	void Restore() {
 		Controlling = false;
 		player.canMove = true;
+		player.canCollide = true;
 		rigidbody2D.isKinematic = false;
-		collider2D.enabled = true;
 	}
 }

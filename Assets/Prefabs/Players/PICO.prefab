@@ -82,7 +82,6 @@ GameObject:
   - 4: {fileID: 478346}
   - 58: {fileID: 5833308}
   - 114: {fileID: 11478346}
-  - 58: {fileID: 5808224}
   m_Layer: 11
   m_Name: Feet
   m_TagString: Untagged
@@ -144,19 +143,6 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!58 &5808224
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 178346}
-  m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: 1aa457a24e95e4dcab2fa856626b212f, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: .200000003
 --- !u!58 &5833308
 CircleCollider2D:
   m_ObjectHideFlags: 1

@@ -42,7 +42,18 @@ public class PlayerController : MonoBehaviour {
 	// Movement capabilities
 	public bool canMove;
 	public bool canJump;
-	
+
+	public bool canCollide
+	{
+		get { return GetComponent<Collider2D>().enabled; }
+		set
+		{
+			GetComponent<Collider2D>().enabled = value;
+			Feet.GetComponent<Collider2D>().enabled = value;
+			Debug.Log(Feet.GetComponent<Collider2D>().enabled);
+		}
+	}
+
 	public Feet Feet;
 	public bool isGrounded { get { return Feet.isGrounded; } }
 	public bool isSwinging;
