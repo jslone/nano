@@ -45,7 +45,7 @@ public class PicoDeath : DeathController {
 		dead = true;
 		timeOfDeath = Time.time;
 		TTD = (transform.parent.position - transform.position).magnitude / DeathSpeed;
-		GetComponent<Collider2D>().enabled = false;
+		GetComponent<PlayerController>().canCollide = false;
 		GetComponent<Rigidbody2D>().isKinematic = true;
 	}
 }
