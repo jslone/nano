@@ -1000,6 +1000,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853228662daf43b488c29fbe36241778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: a2001b16703588a49a7ccb6e7cf3a117, type: 2}
+  fadeInterval: 1
 --- !u!1001 &722146652
 Prefab:
   m_ObjectHideFlags: 0

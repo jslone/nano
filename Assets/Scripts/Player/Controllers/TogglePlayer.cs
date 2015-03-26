@@ -27,6 +27,8 @@ public class TogglePlayer : MonoBehaviour {
 	private static int[] defaultLevels = {0,1};
 	private static GameObject[] disabledWorld;
 
+	private Audio audio;
+
 	// Use this for initialization
 	void Start () {
 		if (currentCharacter == Character.PICO)
@@ -37,6 +39,8 @@ public class TogglePlayer : MonoBehaviour {
 		{
 			Player = GameObject.Find(currentCharacter.ToString()).GetComponent<PlayerController>();
 		}
+
+		audio = Audio.Instance;
 	}
 	
 	// Update is called once per frame
@@ -86,6 +90,7 @@ public class TogglePlayer : MonoBehaviour {
 			// release the pico
 			Player = Instantiate<GameObject>(PicoPrefab).GetComponent<PlayerController>();
 			currentCharacter = Character.PICO;
+			audio.PlayPico();
 			break;
 
 		default:
@@ -108,6 +113,7 @@ public class TogglePlayer : MonoBehaviour {
 				Player = GameObject.Find(Character.NANO.ToString()).GetComponent<PlayerController>();
 				currentCharacter = Character.NANO;
 			}
+			audio.PlayNano();
 			break;
 
 		default:
