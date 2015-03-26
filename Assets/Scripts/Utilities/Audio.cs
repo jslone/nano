@@ -13,7 +13,8 @@ public class Audio : MonoBehaviour {
 	public float fadeInterval = 1f;
 
 	// Volume settings
-	private float minVolume = -20f;
+	private float minVolume = -40f;
+	private float halfVolume = -10f;
 	private float maxVolume = 0f;
 	private float waitTimeBeforeFade = 1f;
 
@@ -40,8 +41,8 @@ public class Audio : MonoBehaviour {
 			StopCoroutine(fadeInCoroutine);
 		}
 
-		fadeInCoroutine = FadeInChannel("NanoVolume");
-		fadeOutCoroutine = FadeOutChannel("PicoVolume");
+		fadeInCoroutine = FadeInChannel("NanoVolume", maxVolume);
+		fadeOutCoroutine = FadeOutChannel("PicoVolume", minVolume);
 		StartCoroutine(fadeInCoroutine);
 		StartCoroutine(fadeOutCoroutine);
 	}
@@ -54,25 +55,25 @@ public class Audio : MonoBehaviour {
 			StopCoroutine(fadeInCoroutine);
 		}
 
-		fadeInCoroutine = FadeInChannel("PicoVolume");
-		fadeOutCoroutine = FadeOutChannel("NanoVolume");
+		fadeInCoroutine = FadeInChannel("PicoVolume", maxVolume);
+		fadeOutCoroutine = FadeOutChannel("NanoVolume", halfVolume);
 		StartCoroutine(fadeInCoroutine);
 		StartCoroutine(fadeOutCoroutine);
 	}
 
 	// Coroutines for fading in and out
-	IEnumerator FadeInChannel(string channel) {
+	IEnumerator FadeInChannel(string channel, float targetVolume) {
 		float volume;
-		for (mixer.GetFloat(channel, out volume); volume <= maxVolume; volume += fadeInterval) {
+		for (mixer.GetFloat(channel, out volume); volume <= targetVolume; volume += fadeInterval) {
 			mixer.SetFloat(channel, volume);
 			yield return null;
 		}
 	}
 
-	IEnumerator FadeOutChannel(string channel) {
+	IEnumerator FadeOutChannel(string channel, float targetVolume) {
 		yield return new WaitForSeconds(waitTimeBeforeFade);
 		float volume;
-		for (mixer.GetFloat(channel, out volume); volume >= minVolume; volume -= fadeInterval) {
+		for (mixer.GetFloat(channel, out volume); volume >= targetVolume; volume -= fadeInterval) {
 			mixer.SetFloat(channel, volume);
 			yield return null;
 		}
