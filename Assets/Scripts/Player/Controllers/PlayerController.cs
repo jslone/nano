@@ -155,7 +155,13 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+	// Call an animation trigger
 	public void SetTrigger(string trigger) {
 		animator.SetTrigger(trigger);
+	}
+
+	// Switch the root animation on the animator
+	public void FlipApplyRootMotion() {
+		animator.applyRootMotion = !animator.applyRootMotion;
 	}
 }
