@@ -1825,6 +1825,11 @@ Prefab:
       propertyPath: ySmooth
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8281408, guid: 2780b3d58390f44d28f36e9d9bf77735, type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24310894, guid: 1f13a518ed7aada48b0a825356709517,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2780b3d58390f44d28f36e9d9bf77735, type: 2}
   m_IsPrefabParent: 0
