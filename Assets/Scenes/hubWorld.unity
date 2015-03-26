@@ -1948,6 +1948,7 @@ GameObject:
   - 224: {fileID: 1631166481}
   - 222: {fileID: 1631166483}
   - 114: {fileID: 1631166482}
+  - 114: {fileID: 1631166484}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1984,26 +1985,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
+  m_Color: {r: .43921572, g: .10980393, b: .356862754, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 8
+    m_Font: {fileID: 12800000, guid: 4f67f2f68620a5c458de29708367eed0, type: 3}
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Arrow keys or WASD to move
+  m_Text: "arrow keys or \nWASD to move"
 --- !u!222 &1631166483
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1631166480}
+--- !u!114 &1631166484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1631166480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: .941176474, g: .844290674, b: .911108494, a: .501960814}
+  m_EffectDistance: {x: .0199999996, y: .0199999996}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1654858331
 GameObject:
   m_ObjectHideFlags: 0
