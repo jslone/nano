@@ -92,6 +92,10 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(Input.GetKeyDown(KeyCode.Tab)) {
+			animator.SetTrigger("BossCutscene");
+		}
+
 		// update animator parameters
 		animator.SetFloat("speed",canMove ? Mathf.Abs(vInput.x) : 0);
 	}
@@ -149,5 +153,9 @@ public class PlayerController : MonoBehaviour {
 			canMove = false;
 			col.GetComponent<LevelDoor>().EndScene();
 		}
+	}
+
+	public void SetTrigger(string trigger) {
+		animator.SetTrigger(trigger);
 	}
 }
