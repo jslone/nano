@@ -72,6 +72,7 @@ public class LavaExpel : MonoBehaviour {
 	
 	void Unfading ()
 	{
+		guiImage.enabled = true;
 		// Fade the texture to clear.
 		FadeToClear();
 		

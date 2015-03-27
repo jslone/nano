@@ -103,10 +103,11 @@ public class LevelDoor : MonoBehaviour {
 		if(guiImage.color.a >= 0.95f) {
 			// ... reload the level.
 			lastSceneWasCutscene = false;
-			Application.LoadLevel(levelName);
 			if(isSpecial) {
 				lastSpecialDoor = name;
 			}
+			Application.LoadLevel(levelName);
+
 		}
 	}
 }
