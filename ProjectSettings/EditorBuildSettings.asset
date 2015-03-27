@@ -25,3 +25,5 @@ EditorBuildSettings:
     path: Assets/Scenes/hubWorldReturn1.unity
   - enabled: 1
     path: Assets/Scenes/hubWorldReturn2.unity
+  - enabled: 1
+    path: Assets/Scenes/microWake.unity
