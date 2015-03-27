@@ -13,7 +13,8 @@ public class DefeatVirus : MonoBehaviour {
 			GameState.SetLevel(9);
 			// TODO: make virus sink
 			GetComponent<SliderJoint2D>().enabled = false;
-			Invoke("EndGame", 4f);
+			Invoke("EndGame", 2f);
+			GameObject.Find(Character.NANO.ToString()).GetComponent<Collider2D>().enabled = false;
 		}
 	}
 
