@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour {
 		animator.SetFloat("speed",canMove ? Mathf.Abs(vInput.x) : 0);
 	}
 
-	void Flip() {
+	public void Flip() {
 		facingRight = !facingRight;
 		Vector3 scale = transform.localScale;
 		scale.x *= -1;
