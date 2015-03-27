@@ -291,6 +291,18 @@ Prefab:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11470590, guid: 8eb062f6745a2fa489f590b2c01c3286, type: 2}
+      propertyPath: scale.x
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470590, guid: 8eb062f6745a2fa489f590b2c01c3286, type: 2}
+      propertyPath: scale.y
+      value: .0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300384, guid: 8eb062f6745a2fa489f590b2c01c3286, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c1cb08a55ccee401aab41bb723b7c812, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8eb062f6745a2fa489f590b2c01c3286, type: 2}
   m_IsPrefabParent: 0
@@ -637,6 +649,14 @@ Prefab:
     - target: {fileID: 11452238, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
       propertyPath: setLevelOnActivate
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 23536530, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+      propertyPath: m_Suspension.m_DampingRatio
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23536530, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+      propertyPath: m_Suspension.m_Frequency
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
@@ -1560,6 +1580,18 @@ Prefab:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11470590, guid: 8eb062f6745a2fa489f590b2c01c3286, type: 2}
+      propertyPath: scale.x
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470590, guid: 8eb062f6745a2fa489f590b2c01c3286, type: 2}
+      propertyPath: scale.y
+      value: .0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300384, guid: 8eb062f6745a2fa489f590b2c01c3286, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c1cb08a55ccee401aab41bb723b7c812, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8eb062f6745a2fa489f590b2c01c3286, type: 2}
   m_IsPrefabParent: 0
@@ -2256,6 +2288,18 @@ Prefab:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11470590, guid: 8eb062f6745a2fa489f590b2c01c3286, type: 2}
+      propertyPath: scale.x
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470590, guid: 8eb062f6745a2fa489f590b2c01c3286, type: 2}
+      propertyPath: scale.y
+      value: .0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300384, guid: 8eb062f6745a2fa489f590b2c01c3286, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c1cb08a55ccee401aab41bb723b7c812, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8eb062f6745a2fa489f590b2c01c3286, type: 2}
   m_IsPrefabParent: 0
