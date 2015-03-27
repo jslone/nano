@@ -151,6 +151,7 @@ GameObject:
   - 4: {fileID: 760852966}
   - 212: {fileID: 760852965}
   - 95: {fileID: 760852964}
+  - 114: {fileID: 760852967}
   m_Layer: 0
   m_Name: micro_wake_up_spritesheet_0
   m_TagString: Untagged
@@ -214,6 +215,17 @@ Transform:
   - {fileID: 1084346026}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &760852967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 760852963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbed10ce2d8b24a579a58a10ce04ea59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1084346021
 GameObject:
   m_ObjectHideFlags: 0
