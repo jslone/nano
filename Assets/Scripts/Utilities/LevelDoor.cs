@@ -13,6 +13,10 @@ public class LevelDoor : MonoBehaviour {
 	public bool sceneStarting = true;      // Whether or not the scene is still fading in.
 	public bool sceneEnding = false;
 	public static bool lastSceneWasCutscene = false;
+	public static int door;
+
+	public bool isSpecial;
+	public static string lastSpecialDoor;
 
 	private bool _isLocked = false;
 	public bool isLocked
@@ -30,6 +34,9 @@ public class LevelDoor : MonoBehaviour {
 	void Start()
 	{
 		guiImage.color = Color.black;
+		if(isSpecial && lastSpecialDoor == name) {
+			GameObject.Find(Character.NANO.ToString()).transform.position = transform.position;
+		}
 	}
 	
 	void Update ()
@@ -53,7 +60,6 @@ public class LevelDoor : MonoBehaviour {
 			guiImage.color = Color.Lerp(guiImage.color, Color.clear, fadeSpeed * Time.deltaTime);
 		} else {
 			guiImage.color = Color.clear;
-			lastSceneWasCutscene = false;
 		}
 	}
 	
@@ -93,8 +99,11 @@ public class LevelDoor : MonoBehaviour {
 		FadeToBlack();
 		
 		// If the screen is almost black...
-		if(guiImage.color.a >= 0.95f)
+		if(guiImage.color.a >= 0.95f) {
 			// ... reload the level.
+			lastSceneWasCutscene = false;
 			Application.LoadLevel(levelName);
+			lastSpecialDoor = name;
+		}
 	}
 }
