@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class MagneticBehaviour : MonoBehaviour {
-	public float Speed;
+	public float AttractSpeed;
+	public float RepelSpeed;
 	public float Cutoff;
 
 	public GameObject nano;
@@ -31,7 +32,10 @@ public class MagneticBehaviour : MonoBehaviour {
 		dn.Normalize();
 
 		// Repel
-		Vector2 force =  - (Speed / (rn * rn)) * dn;
+		Vector2 force = Vector2.zero;
+		if(rn < Cutoff) {
+			force -= (RepelSpeed / (rn * rn)) * dn;
+		}
 
 		// Attract
 		if(pico != null) {
@@ -39,7 +43,9 @@ public class MagneticBehaviour : MonoBehaviour {
 			float rp = dp.magnitude;
 			dp.Normalize();
 
-			force += (Speed / (rp * rp)) * dp;
+			if(rp < Cutoff) {
+				force += (AttractSpeed / (rp * rp)) * dp;
+			}
 		}
 
 		force.y = 0;

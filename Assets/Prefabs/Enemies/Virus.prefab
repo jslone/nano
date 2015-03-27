@@ -28,8 +28,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134302}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.49000001, y: -8.35000038, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 19.4899998, y: -2.44000006, z: 20}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -39,11 +39,11 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134302}
-  m_Mass: 1
+  m_Mass: 3
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -58,9 +58,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: .5}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: .600000024, y: .800000012}
 --- !u!114 &11408544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -72,6 +72,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34b4de05fa8ec4aa5981e0c5326aa9db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sinkRate: 1
+  sinkTime: 4
+  fadeRate: .25
 --- !u!114 &11450022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,8 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a83b5f32c2f149bd96d4f32c54e1ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 100
-  Cutoff: 0
+  AttractSpeed: 500
+  RepelSpeed: 1000
+  Cutoff: 5
   nano: {fileID: 0}
   pico: {fileID: 0}
 --- !u!212 &21257840
@@ -122,7 +126,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 49265be78c6f44bf5b5c4b9491eb9865, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6aaa2558f9c951d41b3342f6412ff1db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
