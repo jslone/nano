@@ -15,3 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/nanoBossCutscene.unity
   - enabled: 1
     path: Assets/Scenes/nanoBoss.unity
+  - enabled: 1
+    path: Assets/Scenes/title.unity
+  - enabled: 1
+    path: Assets/Scenes/credits.unity
