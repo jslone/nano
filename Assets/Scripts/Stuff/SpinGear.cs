@@ -7,6 +7,7 @@ public class SpinGear : MonoBehaviour {
 	public float Scale;
 	public CameraData camData;
 	public Vector3 Offset;
+	public int setLevelOnActivate = 0;
 	// Use this for initialization
 	void Start () {
 	
@@ -16,17 +17,17 @@ public class SpinGear : MonoBehaviour {
 	void FixedUpdate () {
 		if(player) {
 			player.transform.position = transform.position + Vector3.Scale(transform.lossyScale,Offset);
-
 			JointMotor2D motor = wheel.motor;
-
 			motor.motorSpeed = Scale * player.GetComponent<Rigidbody2D>().velocity.x;
+
+			if (motor.motorSpeed != 0 && setLevelOnActivate > 0 && GameState.level < setLevelOnActivate) {
+				GameState.SetLevel(setLevelOnActivate);
+			}
 
 			wheel.motor = motor;
 		} else {
 			JointMotor2D motor = wheel.motor;
-
 			motor.motorSpeed = 0;
-
 			wheel.motor = motor;
 		}
 	}

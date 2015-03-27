@@ -19,6 +19,16 @@ public class GameState : MonoBehaviour {
 		Debug.Log(level);
 	}
 
+	public static void SetLevel(int newLevel) {
+		level = Mathf.Max(level, newLevel);
+		Debug.Log(level);
+	}
+
+	public void SetLevelAnim(int newLevel) {
+		level = Mathf.Max(level, newLevel);
+		Debug.Log(level);
+	}
+
 	public void LoadLevel(string level) {
 		LevelDoor.lastSceneWasCutscene = true;
 		Application.LoadLevel(level);
