@@ -1165,7 +1165,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 401276, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.60000002
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 401276, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1494,7 +1494,7 @@ Prefab:
       objectReference: {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 21283244, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_Color.a
-      value: .70588237
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23583244, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_Motor.m_MotorSpeed
@@ -1696,7 +1696,7 @@ Prefab:
       objectReference: {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 21283244, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_Color.a
-      value: .70588237
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23583244, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_Motor.m_MotorSpeed
@@ -2739,7 +2739,7 @@ Prefab:
       objectReference: {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 21283244, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_Color.a
-      value: .70588237
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23583244, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_Motor.m_MotorSpeed
@@ -3461,7 +3461,7 @@ Prefab:
       objectReference: {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 21283244, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_Color.a
-      value: .70588237
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23583244, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_Motor.m_MotorSpeed
@@ -4816,7 +4816,7 @@ Prefab:
       objectReference: {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 21283244, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_Color.a
-      value: .70588237
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
@@ -5137,7 +5137,7 @@ Prefab:
       objectReference: {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 21283244, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_Color.a
-      value: .70588237
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23583244, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
       propertyPath: m_Motor.m_MotorSpeed
