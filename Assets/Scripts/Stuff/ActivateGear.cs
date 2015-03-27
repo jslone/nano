@@ -6,7 +6,7 @@ public class ActivateGear : MonoBehaviour {
 	public float MotorSpeed = 0f;
 	public int unlockLevel;
 
-	private bool _isLocked = false;
+	private bool _isLocked = true;
 	public bool isLocked
 	{
 		get { return _isLocked; }
