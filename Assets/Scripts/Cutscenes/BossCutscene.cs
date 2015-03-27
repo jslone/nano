@@ -18,6 +18,7 @@ public class BossCutscene : MonoBehaviour {
 	}
 
 	public void LoadBossLevel() {
+		LevelDoor.lastSceneWasCutscene = true;
 		Application.LoadLevel("nanoBoss");
 	}
 }

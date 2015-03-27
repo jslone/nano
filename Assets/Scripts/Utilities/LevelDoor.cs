@@ -9,7 +9,7 @@ public class LevelDoor : MonoBehaviour {
 	
 	public bool sceneStarting = true;      // Whether or not the scene is still fading in.
 	public bool sceneEnding = false;
-
+	public static bool lastSceneWasCutscene = false;
 
 	void Start()
 	{
@@ -31,7 +31,12 @@ public class LevelDoor : MonoBehaviour {
 	void FadeToClear ()
 	{
 		// Lerp the colour of the texture between itself and transparent.
-		guiImage.color = Color.Lerp(guiImage.color, Color.clear, fadeSpeed * Time.deltaTime);
+		if(!lastSceneWasCutscene) {
+			guiImage.color = Color.Lerp(guiImage.color, Color.clear, fadeSpeed * Time.deltaTime);
+		} else {
+			guiImage.color = Color.clear;
+			lastSceneWasCutscene = false;
+		}
 	}
 	
 	
