@@ -8,6 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/hubWorld.unity
   - enabled: 1
+    path: Assets/Scenes/hubWorldCutscene.unity
+  - enabled: 1
     path: Assets/Scenes/nano1.unity
   - enabled: 1
     path: Assets/Scenes/nano2.unity
