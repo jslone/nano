@@ -4,7 +4,7 @@ using System.Collections;
 
 public class LevelDoor : MonoBehaviour {
 	public string levelName;
-	public float fadeSpeed = 1.5f;          // Speed that the screen fades to and from black.
+	public float fadeSpeed = 2.0f;          // Speed that the screen fades to and from black.
 	public Image guiImage;
 	
 	public bool sceneStarting = true;      // Whether or not the scene is still fading in.
