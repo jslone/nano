@@ -15,5 +15,6 @@ public class AnimationTrigger : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		GetComponent<Animation>().Play();
+		Destroy(this);
 	}
 }

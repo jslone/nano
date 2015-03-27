@@ -15,6 +15,7 @@ public class NanoDeath : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col) {
 		if(col.collider.tag == "Lava") {
+			LevelDoor.lastSceneWasCutscene = false;
 			Application.LoadLevel(Application.loadedLevel);
 		}
 	}
