@@ -17,5 +17,10 @@ public class GameState : MonoBehaviour {
 	public void Increment() {
 		level++;
 	}
+
+	public void LoadLevel(string level) {
+		LevelDoor.lastSceneWasCutscene = true;
+		Application.LoadLevel(level);
+	}
 	
 }
