@@ -26,7 +26,7 @@ public class Audio : MonoBehaviour {
 	void Awake () {
 		if(replace) {
 			if(instance) {
-				Destroy(instance);
+				Destroy(instance.gameObject);
 			}
 			instance = this;
 		}

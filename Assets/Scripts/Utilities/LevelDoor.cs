@@ -31,12 +31,12 @@ public class LevelDoor : MonoBehaviour {
 		}
 	}
 
-	void Start()
+	void Awake()
 	{
 		guiImage.color = Color.black;
 		if(isSpecial && lastSpecialDoor == name) {
 			Transform player = GameObject.Find(Character.NANO.ToString()).transform;
-			player.position = new Vector3(transform.position.x,transform.position.y,player.position.z);
+			player.position = new Vector3(transform.position.x,transform.position.y - 0.4f,player.position.z);
 		}
 	}
 	
