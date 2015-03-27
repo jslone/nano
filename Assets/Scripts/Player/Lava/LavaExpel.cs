@@ -21,6 +21,10 @@ public class LavaExpel : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(!guiImage) {
+			guiImage = FindObjectOfType<Image>();
+		}
+
 		if(fading)
 			Fading();
 
