@@ -239,6 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MotorSpeed: 50
   unlockLevel: 4
+  hideIfLocked: 0
 --- !u!1001 &66394345
 Prefab:
   m_ObjectHideFlags: 0
@@ -536,7 +537,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MotorSpeed: 50
-  unlockLevel: 4
+  unlockLevel: 3
+  hideIfLocked: 1
 --- !u!1 &144335256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,7 +1021,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11483270, guid: 1c3c3bd36480443d8b3558d7895c3b63, type: 2}
       propertyPath: unlockLevel
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11483270, guid: 1c3c3bd36480443d8b3558d7895c3b63, type: 2}
       propertyPath: isSpecial
@@ -1131,7 +1133,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11483270, guid: 1c3c3bd36480443d8b3558d7895c3b63, type: 2}
       propertyPath: unlockLevel
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 11483270, guid: 1c3c3bd36480443d8b3558d7895c3b63, type: 2}
       propertyPath: isSpecial
@@ -1318,6 +1320,7 @@ MonoBehaviour:
   useMotor: 1
   Speed: .5
   Offset: {x: 0, y: -4, z: 0}
+  unlockLevel: 0
 --- !u!1 &504859957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1728,6 +1731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MotorSpeed: 50
   unlockLevel: 4
+  hideIfLocked: 0
 --- !u!1 &707473500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,6 +1938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MotorSpeed: -50
   unlockLevel: 7
+  hideIfLocked: 0
 --- !u!1 &723226920
 GameObject:
   m_ObjectHideFlags: 0
@@ -2211,6 +2216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MotorSpeed: 50
   unlockLevel: 4
+  hideIfLocked: 0
 --- !u!235 &806759778
 WheelJoint2D:
   m_PrefabParentObject: {fileID: 23583244, guid: ffdd968fa206a4cd2b34ce9d6704ac62,
@@ -2584,9 +2590,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 655e5d8f697204dbe85871763f624845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useMotor: 1
+  useMotor: 0
   Speed: .5
   Offset: {x: 0, y: -3, z: 0}
+  unlockLevel: 3
 --- !u!1001 &952479763
 Prefab:
   m_ObjectHideFlags: 0
@@ -2865,7 +2872,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MotorSpeed: 50
-  unlockLevel: 7
+  unlockLevel: 6
+  hideIfLocked: 1
 --- !u!1 &1052197301
 GameObject:
   m_ObjectHideFlags: 0
@@ -3339,6 +3347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MotorSpeed: -50
   unlockLevel: 4
+  hideIfLocked: 0
 --- !u!1001 &1177442266
 Prefab:
   m_ObjectHideFlags: 0
@@ -3727,6 +3736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MotorSpeed: -50
   unlockLevel: 4
+  hideIfLocked: 0
 --- !u!4 &1331558441
 Transform:
   m_PrefabParentObject: {fileID: 401276, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
@@ -3878,6 +3888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MotorSpeed: 50
   unlockLevel: 7
+  hideIfLocked: 0
 --- !u!1 &1434934129
 GameObject:
   m_ObjectHideFlags: 0
@@ -4270,6 +4281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MotorSpeed: 50
   unlockLevel: 7
+  hideIfLocked: 0
 --- !u!1001 &1560042454
 Prefab:
   m_ObjectHideFlags: 0
@@ -4696,6 +4708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MotorSpeed: -50
   unlockLevel: 7
+  hideIfLocked: 0
 --- !u!1 &1891875987
 GameObject:
   m_ObjectHideFlags: 0

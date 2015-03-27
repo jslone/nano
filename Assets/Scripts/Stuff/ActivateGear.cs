@@ -4,7 +4,8 @@ using System.Collections;
 public class ActivateGear : MonoBehaviour {
 	
 	public float MotorSpeed = 0f;
-	public int unlockLevel;
+	public int unlockLevel = 0;
+	public bool hideIfLocked = false;
 
 	private bool _isLocked = true;
 	public bool isLocked
@@ -13,9 +14,11 @@ public class ActivateGear : MonoBehaviour {
 		set
 		{
 			if(value != _isLocked) {
-				JointMotor2D motor = GetComponent<WheelJoint2D>().motor;
-				motor.motorSpeed = value ? 0f : MotorSpeed;
-				GetComponent<WheelJoint2D>().motor = motor;
+				if (!hideIfLocked) {
+					JointMotor2D motor = GetComponent<WheelJoint2D>().motor;
+					motor.motorSpeed = value ? 0f : MotorSpeed;
+					GetComponent<WheelJoint2D>().motor = motor;
+				}
 				_isLocked = value;
 			}
 		}
@@ -23,6 +26,9 @@ public class ActivateGear : MonoBehaviour {
 
 	void Start()
 	{
+		if (unlockLevel > GameState.level && hideIfLocked) {
+			gameObject.SetActive(false);
+		}
 	}
 	
 	void Update ()

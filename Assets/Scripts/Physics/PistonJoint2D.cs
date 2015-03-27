@@ -8,6 +8,22 @@ public class PistonJoint2D : MonoBehaviour {
 	
 	private Vector3 pos;
 	private float time = 0;
+
+	public int unlockLevel;
+
+	private bool _isLocked = true;
+	public bool isLocked
+	{
+		get { return _isLocked; }
+		set
+		{
+			if(value != _isLocked) {
+				useMotor = !value;
+				_isLocked = value;
+			}
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 		pos = transform.localPosition;
@@ -15,6 +31,8 @@ public class PistonJoint2D : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		isLocked = unlockLevel > GameState.level;
+		
 		if(useMotor) {
 			time += Time.deltaTime;
 			transform.localPosition = pos + Offset * Mathf.PingPong(Speed * time, 1.0f);
