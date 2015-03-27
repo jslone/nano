@@ -13,11 +13,13 @@ public class WheelGearDriver : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		for(int i = 0; i < reciever.Length; i++) {
-			JointMotor2D motor = reciever[i].motor;
-			motor.motorSpeed += Scale * (driver.angularVelocity - lastAngularVelocity);
-			reciever[i].motor = motor;
+		if (driver.angularVelocity != lastAngularVelocity) {
+			for(int i = 0; i < reciever.Length; i++) {
+				JointMotor2D motor = reciever[i].motor;
+				motor.motorSpeed += Scale * (driver.angularVelocity - lastAngularVelocity);
+				reciever[i].motor = motor;
+			}
+			lastAngularVelocity = driver.angularVelocity;
 		}
-		lastAngularVelocity = driver.angularVelocity;
 	}
 }
