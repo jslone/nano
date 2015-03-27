@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AnimationFlip : MonoBehaviour {
+public class BossCutscene : MonoBehaviour {
 	public PlayerController player;
 	// Use this for initialization
 	void Start () {
@@ -15,5 +15,9 @@ public class AnimationFlip : MonoBehaviour {
 
 	public void Flip() {
 		player.Flip();
+	}
+
+	public void LoadBossLevel() {
+		Application.LoadLevel("nanoBoss");
 	}
 }
