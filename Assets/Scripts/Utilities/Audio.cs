@@ -11,6 +11,7 @@ public class Audio : MonoBehaviour {
 
 	public AudioMixer mixer;
 	public float fadeInterval = 1f;
+	public bool replace;
 
 	// Volume settings
 	private float minVolume = -40f;
@@ -23,7 +24,13 @@ public class Audio : MonoBehaviour {
 
 	// Instantiate once (singleton)
 	void Awake () {
-		if (instance != null && instance != this) {
+		if(replace) {
+			if(instance) {
+				Destroy(instance);
+			}
+			instance = this;
+		}
+		else if (instance != null && instance != this) {
 			Destroy(this.gameObject);
 			return;
 		} else {
