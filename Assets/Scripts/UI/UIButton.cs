@@ -14,13 +14,13 @@ public class UIButton : MonoBehaviour {
 	public void OnClick() {
 		switch(action) {
 			case ButtonAction.PLAY:
-				Application.LoadLevel(0);	// game scene
+				Application.LoadLevel(1);	// game scene
 				break;
 			case ButtonAction.BACK:
-				Application.LoadLevel(5);	// title scene
+				Application.LoadLevel(6);	// title scene
 				break;
 			case ButtonAction.CREDITS:
-				Application.LoadLevel(6);	// credits scene
+				Application.LoadLevel(7);	// credits scene
 				break;
 			case ButtonAction.QUIT:
 				Application.Quit();
