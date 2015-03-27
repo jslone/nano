@@ -8,25 +8,34 @@ public class LevelDoor : MonoBehaviour {
 	public int unlockLevel = 0;
 	public Image guiImage;
 	public Sprite lockedDoor;
+	public Sprite unlockedDoor;
 	
 	public bool sceneStarting = true;      // Whether or not the scene is still fading in.
 	public bool sceneEnding = false;
 	public static bool lastSceneWasCutscene = false;
 
-	public bool isLocked = false;
+	private bool _isLocked = false;
+	public bool isLocked
+	{
+		get { return _isLocked; }
+		set
+		{
+			if(value != _isLocked) {
+				GetComponent<SpriteRenderer>().sprite = value ? lockedDoor : unlockedDoor;
+				_isLocked = value;
+			}
+		}
+	}
 
 	void Start()
 	{
 		guiImage.color = Color.black;
-
-		if (GameState.level < unlockLevel) {
-			isLocked = true;
-			GetComponent<SpriteRenderer>().sprite = lockedDoor;
-		}
 	}
 	
 	void Update ()
 	{
+		isLocked = unlockLevel > GameState.level;
+
 		// If the scene is starting...
 		if(sceneStarting)
 			// ... call the StartScene function.

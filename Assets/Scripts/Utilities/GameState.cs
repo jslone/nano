@@ -13,5 +13,9 @@ public class GameState : MonoBehaviour {
 	{
 
 	}
+
+	public void Increment() {
+		level++;
+	}
 	
 }
