@@ -5,15 +5,24 @@ using System.Collections;
 public class LevelDoor : MonoBehaviour {
 	public string levelName;
 	public float fadeSpeed = 1.5f;          // Speed that the screen fades to and from black.
+	public int unlockLevel = 0;
 	public Image guiImage;
+	public Sprite lockedDoor;
 	
 	public bool sceneStarting = true;      // Whether or not the scene is still fading in.
 	public bool sceneEnding = false;
 	public static bool lastSceneWasCutscene = false;
 
+	public bool isLocked = false;
+
 	void Start()
 	{
 		guiImage.color = Color.black;
+
+		if (GameState.level < unlockLevel) {
+			isLocked = true;
+			GetComponent<SpriteRenderer>().sprite = lockedDoor;
+		}
 	}
 	
 	void Update ()

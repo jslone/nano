@@ -150,8 +150,11 @@ public class PlayerController : MonoBehaviour {
 	public void UseDoor() {
 		Collider2D col = Physics2D.OverlapPoint(transform.FindChild("Head").position,DoorLayer);
 		if(Me == Character.NANO && col) {
-			canMove = false;
-			col.GetComponent<LevelDoor>().EndScene();
+			LevelDoor door = col.GetComponent<LevelDoor>();
+			if (!door.isLocked) {
+				canMove = false;
+				door.EndScene();
+			}
 		}
 	}
 
