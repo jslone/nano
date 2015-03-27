@@ -23,6 +23,8 @@ public class TogglePlayer : MonoBehaviour {
 	public InputController inputController;
 	public CameraController cameraController;
 
+	private Animator animator;
+
 	// default levels
 	private static int[] defaultLevels = {0,1};
 	private static GameObject[] disabledWorld;
@@ -31,13 +33,11 @@ public class TogglePlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if (currentCharacter == Character.PICO)
-		{
+		if (currentCharacter == Character.PICO) {
 			Player = Instantiate<GameObject>(PicoPrefab).GetComponent<PlayerController>();
-		}
-		else
-		{
+		} else {
 			Player = GameObject.Find(currentCharacter.ToString()).GetComponent<PlayerController>();
+			animator = Player.GetComponent<Animator>();
 		}
 
 		audio = Audio.Instance;
@@ -88,6 +88,7 @@ public class TogglePlayer : MonoBehaviour {
 
 		case Character.NANO:
 			// release the pico
+			animator.SetTrigger("deploy");
 			Player = Instantiate<GameObject>(PicoPrefab).GetComponent<PlayerController>();
 			currentCharacter = Character.PICO;
 			audio.PlayPico();
@@ -111,6 +112,7 @@ public class TogglePlayer : MonoBehaviour {
 			} else {
 				Destroy(Player.gameObject);
 				Player = GameObject.Find(Character.NANO.ToString()).GetComponent<PlayerController>();
+				animator.SetTrigger("retract");
 				currentCharacter = Character.NANO;
 			}
 			audio.PlayNano();
