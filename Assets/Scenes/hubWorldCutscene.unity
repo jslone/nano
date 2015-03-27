@@ -4396,6 +4396,10 @@ Prefab:
       propertyPath: unlockLevel
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 139768, guid: 1c3c3bd36480443d8b3558d7895c3b63, type: 2}
+      propertyPath: m_Name
+      value: LevelDoor 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c3c3bd36480443d8b3558d7895c3b63, type: 2}
   m_IsPrefabParent: 0

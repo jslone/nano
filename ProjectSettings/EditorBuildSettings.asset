@@ -21,3 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/credits.unity
   - enabled: 1
     path: Assets/Scenes/hubWorld.unity
+  - enabled: 1
+    path: Assets/Scenes/hubWorldReturn1.unity
+  - enabled: 1
+    path: Assets/Scenes/hubWorldReturn2.unity
