@@ -78,8 +78,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.39999998, y: -1.35000002, z: 10}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalPosition: {x: 78.6299973, y: 3.73000002, z: 20}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 22452742}
   - {fileID: 433390}
@@ -109,7 +109,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: .400000006, y: .699999988}
 --- !u!114 &11414084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -192,8 +192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920b0f449b5564404aa8fe01b5d1553d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: nano1
-  fadeSpeed: 2.5
+  levelName: hubWorld
+  fadeSpeed: 2
   guiImage: {fileID: 11414084}
   sceneStarting: 1
   sceneEnding: 0
@@ -251,7 +251,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 49265be78c6f44bf5b5c4b9491eb9865, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 65d4adaaba97b53429f9d6e131ada9f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!222 &22281908
 CanvasRenderer:
