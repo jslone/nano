@@ -2819,7 +2819,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11483270, guid: 1c3c3bd36480443d8b3558d7895c3b63, type: 2}
       propertyPath: levelName
-      value: hubWorldReturn2
+      value: hubWorldReturn1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483270, guid: 1c3c3bd36480443d8b3558d7895c3b63, type: 2}
+      propertyPath: unlockLevel
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c3c3bd36480443d8b3558d7895c3b63, type: 2}

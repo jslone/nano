@@ -24,7 +24,7 @@ public class InputController : MonoBehaviour {
 		player.vInput.x = Input.GetAxis("Horizontal");
 		player.vInput.y = Input.GetAxis("Vertical");
 		if(Input.GetButtonDown("Action")) {
-			player.DoAction();
+			//player.DoAction();
 			player.UseDoor();
 		}
 	}

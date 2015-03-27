@@ -949,7 +949,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 405222, guid: 1c3c3bd36480443d8b3558d7895c3b63, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -15.29
+      value: -41.1699982
       objectReference: {fileID: 0}
     - target: {fileID: 405222, guid: 1c3c3bd36480443d8b3558d7895c3b63, type: 2}
       propertyPath: m_LocalPosition.y
@@ -981,7 +981,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 139768, guid: 1c3c3bd36480443d8b3558d7895c3b63, type: 2}
       propertyPath: m_Name
-      value: LevelDoor2
+      value: LevelDoor1
       objectReference: {fileID: 0}
     - target: {fileID: 11483270, guid: 1c3c3bd36480443d8b3558d7895c3b63, type: 2}
       propertyPath: levelName
@@ -1089,7 +1089,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 139768, guid: 1c3c3bd36480443d8b3558d7895c3b63, type: 2}
       propertyPath: m_Name
-      value: LevelDoor3
+      value: LevelDoor2
       objectReference: {fileID: 0}
     - target: {fileID: 11483270, guid: 1c3c3bd36480443d8b3558d7895c3b63, type: 2}
       propertyPath: levelName
@@ -1280,6 +1280,7 @@ MonoBehaviour:
   useMotor: 1
   Speed: .5
   Offset: {x: 0, y: -4, z: 0}
+  unlockLevel: 0
 --- !u!1 &504859957
 GameObject:
   m_ObjectHideFlags: 0
@@ -2499,6 +2500,7 @@ MonoBehaviour:
   useMotor: 1
   Speed: .5
   Offset: {x: 0, y: -3, z: 0}
+  unlockLevel: 0
 --- !u!1001 &952479763
 Prefab:
   m_ObjectHideFlags: 0
@@ -4109,7 +4111,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 405222, guid: 1c3c3bd36480443d8b3558d7895c3b63, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -41.1699982
+      value: -15.29
       objectReference: {fileID: 0}
     - target: {fileID: 405222, guid: 1c3c3bd36480443d8b3558d7895c3b63, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4149,7 +4151,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 139768, guid: 1c3c3bd36480443d8b3558d7895c3b63, type: 2}
       propertyPath: m_Name
-      value: LevelDoor1
+      value: LevelDoor0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c3c3bd36480443d8b3558d7895c3b63, type: 2}
@@ -5050,7 +5052,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -357.880005, y: -177.309998}
+  m_AnchoredPosition: {x: -332.040009, y: -177.309998}
   m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &2123845420

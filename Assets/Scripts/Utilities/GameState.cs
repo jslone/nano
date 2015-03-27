@@ -16,6 +16,7 @@ public class GameState : MonoBehaviour {
 
 	public void Increment() {
 		level++;
+		Debug.Log(level);
 	}
 
 	public void LoadLevel(string level) {
