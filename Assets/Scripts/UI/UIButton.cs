@@ -14,7 +14,7 @@ public class UIButton : MonoBehaviour {
 	public void OnClick() {
 		switch(action) {
 			case ButtonAction.PLAY:
-				Application.LoadLevel(2);	// game scene
+				Application.LoadLevel(1);	// game scene
 				break;
 			case ButtonAction.BACK:
 				Application.LoadLevel(0);	// title scene
