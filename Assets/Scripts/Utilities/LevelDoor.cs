@@ -35,7 +35,8 @@ public class LevelDoor : MonoBehaviour {
 	{
 		guiImage.color = Color.black;
 		if(isSpecial && lastSpecialDoor == name) {
-			GameObject.Find(Character.NANO.ToString()).transform.position = transform.position;
+			Transform player = GameObject.Find(Character.NANO.ToString()).transform;
+			player.position = new Vector3(transform.position.x,transform.position.y,player.position.z);
 		}
 	}
 	
@@ -103,7 +104,9 @@ public class LevelDoor : MonoBehaviour {
 			// ... reload the level.
 			lastSceneWasCutscene = false;
 			Application.LoadLevel(levelName);
-			lastSpecialDoor = name;
+			if(isSpecial) {
+				lastSpecialDoor = name;
+			}
 		}
 	}
 }
