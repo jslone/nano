@@ -49,7 +49,7 @@ public class LevelDoor : MonoBehaviour {
 			// ... call the StartScene function.
 			StartScene();
 
-		if(sceneEnding)
+		else if(sceneEnding)
 			EndScene();
 	}
 	
