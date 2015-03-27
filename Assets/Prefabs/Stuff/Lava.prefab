@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2301382}
   - 33: {fileID: 3397136}
   - 114: {fileID: 11491056}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Lava
   m_TagString: Lava
   m_Icon: {fileID: 0}
