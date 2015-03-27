@@ -467,7 +467,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11452238, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
       propertyPath: camData.Size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 11438220, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
       propertyPath: reciever.Array.data[0]
@@ -487,11 +487,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11452238, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
       propertyPath: camData.Offset.x
-      value: 2
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 6130306, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452238, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+      propertyPath: setLevelOnActivate
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
@@ -2827,6 +2831,10 @@ Prefab:
     - target: {fileID: 6130306, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452238, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+      propertyPath: setLevelOnActivate
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
