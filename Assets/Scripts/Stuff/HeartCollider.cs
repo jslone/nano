@@ -14,9 +14,9 @@ public class HeartCollider : MonoBehaviour {
 	public Ventricle ventricle;
 
 	void ToggleZ(GameObject heart, bool front) {
-		Vector3 position = heart.transform.position;
+		Vector3 position = heart.transform.localPosition;
 		position.z = front ? -5 : 0;
-		heart.transform.position = position;
+		heart.transform.localPosition = position;
 	}
 
 	void ToggleColliders(GameObject parent, bool on) {
