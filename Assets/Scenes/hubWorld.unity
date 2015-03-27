@@ -1315,9 +1315,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 655e5d8f697204dbe85871763f624845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useMotor: 1
+  useMotor: 0
   Speed: .5
   Offset: {x: 0, y: -4, z: 0}
+  unlockLevel: 7
 --- !u!1 &504859957
 GameObject:
   m_ObjectHideFlags: 0
@@ -2584,9 +2585,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 655e5d8f697204dbe85871763f624845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useMotor: 1
+  useMotor: 0
   Speed: .5
   Offset: {x: 0, y: -3, z: 0}
+  unlockLevel: 3
 --- !u!1001 &952479763
 Prefab:
   m_ObjectHideFlags: 0
