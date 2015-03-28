@@ -1774,11 +1774,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 23484322, guid: 253c636fb6d8643159d2081f660eced4, type: 2}
       propertyPath: m_Motor.m_MotorSpeed
-      value: -20
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 23484322, guid: 253c636fb6d8643159d2081f660eced4, type: 2}
       propertyPath: m_TranslationLimits.m_UpperTranslation
-      value: 7.5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 11456250, guid: 253c636fb6d8643159d2081f660eced4, type: 2}
       propertyPath: reciever.Array.data[1]
