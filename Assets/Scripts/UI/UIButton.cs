@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public enum ButtonAction {
@@ -14,13 +15,13 @@ public class UIButton : MonoBehaviour {
 	public void OnClick() {
 		switch(action) {
 			case ButtonAction.PLAY:
-				Application.LoadLevel("hubWorldCutscene");	// game scene
+				SceneManager.LoadScene("hubWorldCutscene");	// game scene
 				break;
 			case ButtonAction.BACK:
-				Application.LoadLevel("title");	// title scene
+				SceneManager.LoadScene("title");	// title scene
 				break;
 			case ButtonAction.CREDITS:
-				Application.LoadLevel("credits");	// credits scene
+				SceneManager.LoadScene("credits");	// credits scene
 				break;
 			case ButtonAction.QUIT:
 				Application.Quit();

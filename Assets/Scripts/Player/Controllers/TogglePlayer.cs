@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -29,7 +30,7 @@ public class TogglePlayer : MonoBehaviour {
 	private static int[] defaultLevels = {0,1};
 	private static GameObject[] disabledWorld;
 
-	private Audio audio;
+	private Audio _audio;
 
 	// Use this for initialization
 	void Start () {
@@ -40,7 +41,7 @@ public class TogglePlayer : MonoBehaviour {
 			animator = Player.GetComponent<Animator>();
 		}
 
-		audio = Audio.Instance;
+		_audio = Audio.Instance;
 	}
 	
 	// Update is called once per frame
@@ -64,15 +65,13 @@ public class TogglePlayer : MonoBehaviour {
 		}
 
 		// if nano's world can't be found, load it
-		if (disabledWorld == null || disabledWorld.Length == 0)
-		{
-			Application.LoadLevelAdditive(defaultLevels[(int)next]);
+		if (disabledWorld == null || disabledWorld.Length == 0) {
+			SceneManager.LoadScene(defaultLevels[(int)next], LoadSceneMode.Additive);
 		}
 		// otherwise activate nano's world
 		else
 		{
-			foreach (GameObject g in disabledWorld)
-			{
+			foreach (GameObject g in disabledWorld) {
 				g.SetActive(true);
 			}
 		}
@@ -91,7 +90,7 @@ public class TogglePlayer : MonoBehaviour {
 			animator.SetTrigger("deploy");
 			Player = Instantiate<GameObject>(PicoPrefab).GetComponent<PlayerController>();
 			currentCharacter = Character.PICO;
-			audio.PlayPico();
+			_audio.PlayPico();
 			break;
 
 		default:
@@ -115,7 +114,7 @@ public class TogglePlayer : MonoBehaviour {
 				animator.SetTrigger("retract");
 				currentCharacter = Character.NANO;
 			}
-			audio.PlayNano();
+			_audio.PlayNano();
 			break;
 
 		default:

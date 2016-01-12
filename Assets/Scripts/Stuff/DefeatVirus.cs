@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class DefeatVirus : MonoBehaviour {
@@ -19,7 +20,7 @@ public class DefeatVirus : MonoBehaviour {
 	}
 
 	void EndGame () {
-		Application.LoadLevel("microWake");
+		SceneManager.LoadScene("microWake");
 	}
 
 }

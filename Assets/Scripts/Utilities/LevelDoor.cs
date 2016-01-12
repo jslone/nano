@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class LevelDoor : MonoBehaviour {
@@ -106,7 +107,7 @@ public class LevelDoor : MonoBehaviour {
 			if(isSpecial) {
 				lastSpecialDoor = name;
 			}
-			Application.LoadLevel(levelName);
+			SceneManager.LoadScene(levelName);
 
 		}
 	}

@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class GoToCredits : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Invoke ("LoadCredits",15);
+		Invoke ("LoadCredits", 15);
 	}
 	
 	// Update is called once per frame
@@ -14,6 +15,6 @@ public class GoToCredits : MonoBehaviour {
 	}
 
 	void LoadCredits() {
-		Application.LoadLevel("credits");
+		SceneManager.LoadScene("credits");
 	}
 }

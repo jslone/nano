@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class GameState : MonoBehaviour {
@@ -31,7 +32,7 @@ public class GameState : MonoBehaviour {
 
 	public void LoadLevel(string level) {
 		LevelDoor.lastSceneWasCutscene = true;
-		Application.LoadLevel(level);
+		SceneManager.LoadScene(level);
 	}
 	
 }

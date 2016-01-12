@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 [RequireComponent (typeof (Collider2D))]
@@ -18,7 +19,7 @@ public class LoadLevel : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (!hasLoaded) {
-			Application.LoadLevelAdditive(level);
+			SceneManager.LoadScene(level, LoadSceneMode.Additive);
 			hasLoaded = true;
 			Destroy(this);
 		}

@@ -15,7 +15,6 @@ public class CameraController : MonoBehaviour
 		set
 		{
 			if(!lastSet) {
-				Debug.Log(Application.loadedLevelName);
 				_lastPlayerCamera = value;
 				Vector2 Track = (Vector2)value.Track.position + value.Offset;
 				transform.position = new Vector3(Track.x,Track.y,transform.position.z);

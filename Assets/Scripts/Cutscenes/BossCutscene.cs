@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class BossCutscene : MonoBehaviour {
@@ -19,6 +20,6 @@ public class BossCutscene : MonoBehaviour {
 
 	public void LoadBossLevel() {
 		LevelDoor.lastSceneWasCutscene = true;
-		Application.LoadLevel("nanoBoss");
+		SceneManager.LoadScene("nanoBoss");
 	}
 }
