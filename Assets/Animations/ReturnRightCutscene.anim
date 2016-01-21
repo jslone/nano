@@ -12,27 +12,29 @@ AnimationClip:
   m_UseHighQualityCurve: 1
   m_RotationCurves: []
   m_CompressedRotationCurves: []
+  m_EulerCurves: []
   m_PositionCurves:
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: 11.29, y: -2.01999998, z: 5}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
+        value: {x: 11.29, y: -2.02, z: 5}
+        inSlope: {x: -4.216486, y: -2.5678601, z: 0}
+        outSlope: {x: -4.216486, y: -2.5678601, z: 0}
         tangentMode: 0
-      - time: 1.00083339
-        value: {x: 11.29, y: -2.01999998, z: 5}
-        inSlope: {x: -3.10038948, y: 1.25469708, z: 0}
-        outSlope: {x: -3.10038948, y: 1.25469708, z: 0}
+      - time: 1.0008334
+        value: {x: 7.07, y: -4.59, z: 5}
+        inSlope: {x: -3.8011837, y: 0.82790995, z: 0}
+        outSlope: {x: -3.8011837, y: 0.82790995, z: 0}
         tangentMode: 0
       - time: 2.5
-        value: {x: 1.99399948, y: 1.7420001, z: 5}
-        inSlope: {x: -6.20077896, y: 2.50939417, z: 0}
-        outSlope: {x: -6.20077896, y: 2.50939417, z: 0}
+        value: {x: 1.9939995, y: 1.7420001, z: 5}
+        inSlope: {x: -3.3858817, y: 4.22368, z: 0}
+        outSlope: {x: -3.3858817, y: 4.22368, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     path: GearGearDriver
   m_ScaleCurves: []
   m_FloatCurves: []
@@ -47,11 +49,14 @@ AnimationClip:
     pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2.75
+    m_StopTime: 5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
     m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
@@ -68,21 +73,22 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 11.29
-        inSlope: 0
-        outSlope: 0
+        inSlope: -4.216486
+        outSlope: -4.216486
         tangentMode: 10
-      - time: 1.00083339
-        value: 11.29
-        inSlope: -3.10038948
-        outSlope: -3.10038948
+      - time: 1.0008334
+        value: 7.07
+        inSlope: -3.8011837
+        outSlope: -3.8011837
         tangentMode: 10
       - time: 2.5
-        value: 1.99399948
-        inSlope: -6.20077896
-        outSlope: -6.20077896
+        value: 1.9939995
+        inSlope: -3.3858817
+        outSlope: -3.3858817
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: m_LocalPosition.x
     path: GearGearDriver
     classID: 4
@@ -91,22 +97,23 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: -2.01999998
-        inSlope: 0
-        outSlope: 0
+        value: -2.02
+        inSlope: -2.5678601
+        outSlope: -2.5678601
         tangentMode: 10
-      - time: 1.00083339
-        value: -2.01999998
-        inSlope: 1.25469708
-        outSlope: 1.25469708
+      - time: 1.0008334
+        value: -4.59
+        inSlope: 0.82790995
+        outSlope: 0.82790995
         tangentMode: 10
       - time: 2.5
         value: 1.7420001
-        inSlope: 2.50939417
-        outSlope: 2.50939417
+        inSlope: 4.22368
+        outSlope: 4.22368
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: m_LocalPosition.y
     path: GearGearDriver
     classID: 4
@@ -119,7 +126,7 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 1.00083339
+      - time: 1.0008334
         value: 5
         inSlope: 0
         outSlope: 0
@@ -131,6 +138,7 @@ AnimationClip:
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: m_LocalPosition.z
     path: GearGearDriver
     classID: 4
@@ -140,14 +148,21 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 2.58333325
+  - time: 2.5833333
     functionName: Increment
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 2.75
+  - time: 3.5833333
+    functionName: ResetTarget
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 5
     functionName: LoadLevel
     data: hubWorld
     objectReferenceParameter: {fileID: 0}
