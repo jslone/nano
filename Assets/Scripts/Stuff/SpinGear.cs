@@ -33,7 +33,6 @@ public class SpinGear : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log(other.name);
 		if(other.tag == Character.PICO.ToString()) {
 			player = other.GetComponent<PlayerController>();
 			player.canCollide = false;

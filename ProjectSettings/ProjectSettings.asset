@@ -173,7 +173,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: 3bbc6a448a651e34198c2c5e2bc8d2c7, type: 3}
       m_Width: 128
       m_Height: 128
   m_BuildTargetBatching: []
@@ -336,14 +336,16 @@ PlayerSettings:
   scriptingDefineSymbols: {}
   metroPackageName: nano
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: Badass Bard Games
+  metroCertificateIssuer: Badass Bard Games
+  metroCertificateNotAfter: 802017d3b770d201
   metroApplicationDescription: nano
-  wsaImages: {}
-  metroTileShortName: 
+  wsaImages:
+    65636: Assets/Sprite/gear_small.png
+    65936: 
+  metroTileShortName: nano
   metroCommandLineArgsFile: 
   metroTileShowName: 0
   metroMediumTileShowName: 0
