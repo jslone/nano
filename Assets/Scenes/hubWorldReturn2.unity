@@ -215,11 +215,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 401276, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
   m_PrefabInternal: {fileID: 42547578}
---- !u!235 &42547580 stripped
-WheelJoint2D:
-  m_PrefabParentObject: {fileID: 23583244, guid: ffdd968fa206a4cd2b34ce9d6704ac62,
-    type: 2}
-  m_PrefabInternal: {fileID: 42547578}
 --- !u!1001 &66394345
 Prefab:
   m_ObjectHideFlags: 0
@@ -447,10 +442,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 303339904}
     m_Modifications:
-    - target: {fileID: 11438220, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: reciever.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 452340, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
@@ -472,54 +463,6 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 452340, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.8000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 452340, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.8000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6130306, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: m_Size.x
-      value: .5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6130306, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: m_Size.y
-      value: .300000012
-      objectReference: {fileID: 0}
-    - target: {fileID: 11452238, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: camData.Offset.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11452238, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: camData.Size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 11438220, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: reciever.Array.data[0]
-      value: 
-      objectReference: {fileID: 42547580}
-    - target: {fileID: 11438220, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: reciever.Array.data[1]
-      value: 
-      objectReference: {fileID: 636938736}
-    - target: {fileID: 11438220, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: reciever.Array.data[2]
-      value: 
-      objectReference: {fileID: 1021463414}
-    - target: {fileID: 11452238, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: Offset.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11452238, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: camData.Offset.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6130306, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 452340, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1.9939995
       objectReference: {fileID: 0}
@@ -527,13 +470,39 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 1.7420001
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11438220, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-    - {fileID: 11452238, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-    - {fileID: 6130306, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-    - {fileID: 23536530, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-    - {fileID: 5001990, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-    - {fileID: 5094120, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+    - target: {fileID: 11438220, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452238, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130306, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23536530, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001990, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001990, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+      propertyPath: m_SleepingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 452340, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 452340, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &118917364 stripped
@@ -1821,11 +1790,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!235 &636938736 stripped
-WheelJoint2D:
-  m_PrefabParentObject: {fileID: 23583244, guid: ffdd968fa206a4cd2b34ce9d6704ac62,
-    type: 2}
-  m_PrefabInternal: {fileID: 706377872}
 --- !u!1001 &706377872
 Prefab:
   m_ObjectHideFlags: 0

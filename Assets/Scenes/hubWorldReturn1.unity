@@ -941,11 +941,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!235 &319899080 stripped
-WheelJoint2D:
-  m_PrefabParentObject: {fileID: 23583244, guid: ffdd968fa206a4cd2b34ce9d6704ac62,
-    type: 2}
-  m_PrefabInternal: {fileID: 1529580252}
 --- !u!1001 &334921291
 Prefab:
   m_ObjectHideFlags: 0
@@ -2305,11 +2300,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdd968fa206a4cd2b34ce9d6704ac62, type: 2}
   m_IsPrefabParent: 0
---- !u!235 &806759778 stripped
-WheelJoint2D:
-  m_PrefabParentObject: {fileID: 23583244, guid: ffdd968fa206a4cd2b34ce9d6704ac62,
-    type: 2}
-  m_PrefabInternal: {fileID: 1421572086}
 --- !u!1 &892336538
 GameObject:
   m_ObjectHideFlags: 0
@@ -3067,10 +3057,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1631747689}
     m_Modifications:
-    - target: {fileID: 11438220, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: reciever.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 452340, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
       propertyPath: m_LocalPosition.x
       value: -2.026001
@@ -3103,6 +3089,34 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 155306, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+      propertyPath: m_Name
+      value: GearGearDriver 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001990, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001990, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+      propertyPath: m_SleepingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 23536530, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130306, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452238, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438220, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 452340, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
       propertyPath: m_LocalScale.x
       value: 2.4
@@ -3111,57 +3125,7 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 2.4
       objectReference: {fileID: 0}
-    - target: {fileID: 6130306, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: m_Size.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6130306, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: m_Size.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 11452238, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: camData.Offset.y
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 11452238, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: camData.Size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 11438220, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: reciever.Array.data[0]
-      value: 
-      objectReference: {fileID: 806759778}
-    - target: {fileID: 11438220, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: reciever.Array.data[1]
-      value: 
-      objectReference: {fileID: 319899080}
-    - target: {fileID: 11438220, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: reciever.Array.data[2]
-      value: 
-      objectReference: {fileID: 1021463414}
-    - target: {fileID: 11452238, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: Offset.y
-      value: -0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 11452238, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: camData.Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155306, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: m_Name
-      value: GearGearDriver 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6130306, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 23536530, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-    - {fileID: 5001990, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-    - {fileID: 5094120, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-    - {fileID: 11452238, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-    - {fileID: 11438220, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
-    - {fileID: 6130306, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edd80a1ff19fa4ea3acd2644b8e10933, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1049333337 stripped
