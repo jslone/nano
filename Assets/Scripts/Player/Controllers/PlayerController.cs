@@ -50,7 +50,6 @@ public class PlayerController : MonoBehaviour {
 		{
 			GetComponent<Collider2D>().enabled = value;
 			Feet.GetComponent<Collider2D>().enabled = value;
-			Debug.Log(Feet.GetComponent<Collider2D>().enabled);
 		}
 	}
 
@@ -89,15 +88,15 @@ public class PlayerController : MonoBehaviour {
 			transform.localPosition = Vector3.right * 0.25f;
 		}
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.Tab)) {
+		/*if(Input.GetKeyDown(KeyCode.Tab)) {
 			animator.SetTrigger("BossCutscene");
-		}
+		}*/
 
 		// update animator parameters
-		animator.SetFloat("speed",canMove ? Mathf.Abs(vInput.x) : 0);
+		animator.SetFloat("speed", canMove ? Mathf.Abs(vInput.x) : 0);
 	}
 
 	public void Flip() {

@@ -9,7 +9,7 @@ public class GameState : MonoBehaviour {
 	{
 
 	}
-	
+
 	void Update ()
 	{
 
@@ -17,22 +17,19 @@ public class GameState : MonoBehaviour {
 
 	public void Increment() {
 		level++;
-		Debug.Log(level);
 	}
 
 	public static void SetLevel(int newLevel) {
 		level = Mathf.Max(level, newLevel);
-		Debug.Log(level);
 	}
 
 	public void SetLevelAnim(int newLevel) {
 		level = Mathf.Max(level, newLevel);
-		Debug.Log(level);
 	}
 
 	public void LoadLevel(string level) {
 		LevelDoor.lastSceneWasCutscene = true;
 		SceneManager.LoadScene(level);
 	}
-	
+
 }
